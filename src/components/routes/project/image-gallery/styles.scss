@@ -1,0 +1,48 @@
+.image-gallery {
+    .image-container {
+        display: flex;
+        max-height: 400px;
+        justify-content: center;
+
+        .image {
+            margin-bottom: 0;
+
+            &.portrait {
+                max-height: 100%;
+            }
+
+            &.landscape {
+                max-width: 100%;
+            }
+        }
+
+        picture {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .thumbnails {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+
+        picture {
+            display: block;
+            margin-right: 20px;
+            height: 100%;
+        }
+
+        picture:last-child {
+            margin-right: 0;
+        }
+
+        .thumbnail {
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+}

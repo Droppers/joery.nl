@@ -1,0 +1,29 @@
+#app {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: $nav-bar-height;
+    background-color: rgb(249, 249, 249);
+    position: relative;
+
+    .corner {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &.corner-top {
+            width: 32%;
+        }
+
+        &.corner-bottom {
+            width: 43%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 0;
+
+        .corner {
+            display: none;
+        }
+    }
+}

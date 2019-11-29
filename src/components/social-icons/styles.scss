@@ -1,0 +1,21 @@
+.social-icons {
+    margin-top: 20px;
+
+    a.icon {
+        margin-left: 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        svg {
+            transform: scale(1.25);
+            opacity: 0.77;
+            transition: opacity 250ms;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

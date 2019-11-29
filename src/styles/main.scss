@@ -1,0 +1,31 @@
+// Mixins
+@import "mixins/variables";
+
+// Utilities
+@import "utilities/grid";
+
+// Base
+@import "base/normalize";
+@import "base/typography";
+@import "base/base";
+
+// Css components
+@import "components/button";
+@import "components/card";
+
+// Components
+@import "../components/app/styles";
+@import "../components/nav-bar/styles";
+@import "../components/footer/styles";
+@import "../components/social-icons/styles";
+@import "../components/routes/project/image-gallery/styles";
+
+// Home
+@import "../components/routes/home/cover/styles";
+@import "../components/routes/home/project-card/styles";
+
+// About
+@import "../components/routes/about/timeline/styles";
+
+// 404
+@import "../components/routes/not-found/styles";

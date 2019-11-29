@@ -1,0 +1,26 @@
+.not-found {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    .four-o-four {
+        font-size: 200px;
+        color: rgb(51, 51, 51);
+        text-align: center;
+        text-overflow: clip;
+        letter-spacing: 3px;
+        text-shadow: -3px 0 1px rgb(30, 242, 241), 3px 0 1px rgb(246, 5, 10);
+
+        @media (max-width: 768px) {
+            font-size: 120px;
+            text-shadow: -2px 0 1px rgb(30, 242, 241), 2px 0 1px rgb(246, 5, 10);
+        }
+    }
+
+    @media (max-width: 768px) {
+        h2.title {
+            padding: 0 20px;
+        }
+    }
+}
