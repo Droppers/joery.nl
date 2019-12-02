@@ -77,7 +77,10 @@
         .description {
             font-size: 16px;
             display: block;
-            color: rgba(0, 0, 0, 0.77);
+
+            @include themed() {
+                color: t($text-secondary);
+            }
         }
     }
 

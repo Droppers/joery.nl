@@ -24,10 +24,13 @@ h2.title {
     height: 5px;
     margin-left: 2px;
     margin-bottom: 8px;
-    background: #3445e7;
     border-radius: 50%;
     vertical-align: bottom;
     display: inline-block;
+
+    @include themed() {
+      background-color: t($primary);
+    }
   }
 }
 

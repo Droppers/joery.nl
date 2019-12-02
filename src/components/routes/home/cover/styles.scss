@@ -34,9 +34,12 @@
 
     @media screen and (max-width: 768px) {
         padding: 30px 30px;
-        background-color: white;
         margin-bottom: 30px;
-        border-bottom: 1px solid #e6e6e6;
+
+        @include themed() {
+            background-color: t($card-bg);
+            border-bottom: 1px solid darken(t($card-bg), 6%);
+        }
 
 
         h1 {

@@ -7,9 +7,15 @@
     font-size: 15px;
     overflow: hidden;
 
-    &.btn-primary {
-        background: $color-primary;
-        color: white;
+    @include themed() {
+        &.btn-primary {
+            background: t($primary);
+            color: white;
+
+            .btn-outline {
+                border: 1px solid t($primary);
+            }
+        }
     }
 
     &:after {
@@ -34,18 +40,17 @@
     &.btn-text,
     &.btn-outline {
         background: transparent;
-        color: $color-primary;
 
-        &:hover:after {
-            background-color: adjust-color($color-primary, $alpha: -0.85);
+        @include themed() {
+            color: t($primary);
+
+            &:hover:after {
+                background-color: adjust-color(t($primary), $alpha: -0.85);
+            }
+
+            &:active:after {
+                background-color: adjust-color(t($primary), $alpha: -0.75);
+            }
         }
-
-        &:active:after {
-            background-color: adjust-color($color-primary, $alpha: -0.75);
-        }
-    }
-
-    &.btn-outline {
-        border: 1px solid $color-primary;
     }
 }

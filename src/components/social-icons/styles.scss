@@ -10,8 +10,12 @@
 
         svg {
             transform: scale(1.25);
-            opacity: 0.77;
+            opacity: 0.8;
             transition: opacity 250ms;
+
+            @include themed() {
+                filter: t($icon-filter);
+            }
 
             &:hover {
                 opacity: 1;

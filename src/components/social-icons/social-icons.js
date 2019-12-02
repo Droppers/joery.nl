@@ -1,6 +1,6 @@
 import React from "react";
-import Linkedin from "../../vector/icons/linkedin";
-import Github from "../../vector/icons/github";
+import Linkedin from "vector/icons/linkedin";
+import Github from "vector/icons/github";
 
 class SocialIcons extends React.Component {
   render() {

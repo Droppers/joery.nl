@@ -2,20 +2,38 @@
     width: 100%;
     min-height: 100vh;
     padding-top: $nav-bar-height;
-    background-color: rgb(249, 249, 249);
     position: relative;
+
+    @include themed() {
+        color: t($text);
+        background-color: t($bg);
+
+        .logo {
+            #prefix__logo-bottom {
+                fill: t($logo-secondary);
+            }
+
+            #prefix__logo-top {
+                fill: t($primary);
+            }
+        }
+    }
 
     .corner {
         position: absolute;
         top: 0;
         right: 0;
 
-        &.corner-top {
-            width: 32%;
-        }
+        @include themed() {
+            &.corner-top {
+                width: 32%;
+                opacity: t($corner-top-opacity);
+            }
 
-        &.corner-bottom {
-            width: 43%;
+            &.corner-bottom {
+                width: 43%;
+                opacity: t($corner-bottom-opacity);
+            }
         }
     }
 

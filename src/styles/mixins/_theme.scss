@@ -1,0 +1,58 @@
+$themes: (light: (primary: #3445e7,
+        secondary: orange,
+        bg: #f2f2f2,
+        card-bg: #FFF,
+        text: #000,
+        text-secondary: rgba(0, 0, 0, .7),
+        timeline: #aeb4f2,
+        icon-filter: "",
+        logo-secondary: rgb(102, 69, 232),
+        corner-top-opacity: 1,
+        corner-bottom-opacity: 1),
+    dark: (bg: #292929,
+        primary: #6d7bff,
+        secondary: purple,
+        card-bg: #313131,
+        text: #FFF,
+        text-secondary: rgba(255, 255, 255, .85),
+        timeline: #646464,
+        icon-filter: brightness(0) invert(1),
+        logo-secondary: rgb(145, 120, 242),
+        corner-top-opacity: .5,
+        corner-bottom-opacity: .65));
+
+$bg: 'bg';
+$card-bg: 'card-bg';
+$primary: 'primary';
+$secondary: 'secondary';
+$text: 'text';
+$text-secondary: 'text-secondary';
+$timeline: 'timeline';
+$icon-filter: 'icon-filter';
+$logo-secondary: 'logo-secondary';
+
+$corner-top-opacity: 'corner-top-opacity';
+$corner-bottom-opacity: 'corner-bottom-opacity';
+
+@mixin themed() {
+
+    @each $theme,
+    $map in $themes {
+        @media (prefers-color-scheme: #{$theme}) {
+            $theme-map: () !global;
+
+            @each $key,
+            $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function t($key) {
+    @return map-get($theme-map, $key);
+}

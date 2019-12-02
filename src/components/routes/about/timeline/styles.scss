@@ -21,19 +21,25 @@ $stroke-color: #aeb4f2;
         top: 0px;
         bottom: 0px;
         width: 3px;
-        background: $stroke-color;
+
+        @include themed() {
+            background-color: t($timeline);
+        }
     }
 
     .indicator {
         width: 7px;
         height: 7px;
-        background: $indicator-color;
         border-radius: 50px;
-        box-shadow: 0px 0px 0px 2px rgb(249, 249, 249);
         margin-right: 18px;
         position: absolute;
         left: -2px;
         top: 32px;
+
+        @include themed() {
+            background-color: t($primary);
+            box-shadow: 0px 0px 0px 2px t($bg);
+        }
     }
 
     .inner-item {
@@ -45,6 +51,10 @@ $stroke-color: #aeb4f2;
             margin-right: 15px;
             width: 40px;
             object-fit: scale-down;
+
+            @include themed() {
+                filter: t($icon-filter);
+            }
         }
 
         .content {
@@ -63,12 +73,19 @@ $stroke-color: #aeb4f2;
             .subtitle {
                 font-size: 15px;
                 margin-top: 2px;
-                color: rgba(0, 0, 0, 0.7);
+
+                @include themed() {
+                    color: t($text-secondary);
+                }
             }
 
             .timespan {
                 font-size: 14px;
-                color: rgba(0, 0, 0, 0.5);
+                opacity: .7;
+
+                @include themed() {
+                    color: t($text-secondary);
+                }
             }
         }
     }
@@ -88,8 +105,10 @@ $stroke-color: #aeb4f2;
             width: 26px;
             height: 26px;
 
-            .stroke {
-                stroke: $stroke-color;
+            @include themed() {
+                .stroke {
+                    stroke: t($timeline);
+                }
             }
         }
     }
