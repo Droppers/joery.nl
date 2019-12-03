@@ -20,6 +20,12 @@
         font-size: 20px;
         padding: 30px;
         padding-bottom: 0px;
+
+        &:after {
+            width: 3px;
+            height: 3px;
+            margin-bottom: 5px;
+        }
     }
 
     .card-content {

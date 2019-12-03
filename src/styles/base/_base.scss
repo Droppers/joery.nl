@@ -19,18 +19,9 @@ h2.title {
   text-align: center;
 
   &:after {
-    content: "";
     width: 5px;
     height: 5px;
-    margin-left: 2px;
     margin-bottom: 8px;
-    border-radius: 50%;
-    vertical-align: bottom;
-    display: inline-block;
-
-    @include themed() {
-      background-color: t($primary);
-    }
   }
 }
 
@@ -40,8 +31,27 @@ h3.title {
   font-size: 24px;
   margin: 0;
   display: inline-block;
+
+  &:after {
+    width: 4px;
+    height: 4px;
+    margin-bottom: 6px;
+  }
 }
 
+h2.title:after,
+h3.title:after,
+.card-title:after {
+  content: "";
+  margin-left: 3px;
+  border-radius: 50%;
+  vertical-align: bottom;
+  display: inline-block;
+
+  @include themed() {
+    background-color: t($primary);
+  }
+}
 
 .page-content {
   margin-top: 60px;

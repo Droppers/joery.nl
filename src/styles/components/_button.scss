@@ -12,7 +12,7 @@
             background: t($primary);
             color: white;
 
-            .btn-outline {
+            &.btn-outline {
                 border: 1px solid t($primary);
             }
         }

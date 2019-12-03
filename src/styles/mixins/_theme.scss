@@ -16,7 +16,7 @@ $themes: (light: (primary: #3445e7,
         text: #FFF,
         text-secondary: rgba(255, 255, 255, .85),
         timeline: #646464,
-        icon-filter: brightness(0) invert(1),
+        icon-filter: brightness(0) invert(1) opacity(0.8),
         logo-secondary: rgb(145, 120, 242),
         corner-top-opacity: .5,
         corner-bottom-opacity: .65));

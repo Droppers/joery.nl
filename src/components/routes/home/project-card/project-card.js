@@ -63,7 +63,7 @@ class ProjectCard extends React.Component {
           <span className="description">{project.description}</span>
           <Link
             to={"/project/" + project.slug}
-            className="btn btn-outline read-more"
+            className="btn btn-primary btn-outline read-more"
           >
             Meer informatie
           </Link>
