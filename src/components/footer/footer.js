@@ -5,7 +5,7 @@ import Logo from "vector/logo";
 class Footer extends React.Component {
   render() {
     return (
-      <footer id="main-footer">
+      <footer id="main-footer" className="dont-print">
         <Logo
           alt="Joery Droppers"
           className="logo"

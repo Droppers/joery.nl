@@ -1,0 +1,43 @@
+#about {
+    .about-left {
+        flex: 0 0 58.3333333333%;
+        max-width: 58.3333333333%;
+    }
+
+    .about-right {
+        flex: 0 0 41.6666666667%;
+        max-width: 41.6666666667%;
+    }
+
+    .print-resume {
+        width: 100%;
+    }
+
+    .my-summary {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .personal-details {
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        .personal-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 15px;
+            ;
+
+            >.icon {
+                height: 20px;
+                margin-right: 10px;
+                opacity: .8;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

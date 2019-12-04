@@ -47,6 +47,7 @@ h3.title:after,
   border-radius: 50%;
   vertical-align: bottom;
   display: inline-block;
+  -webkit-print-color-adjust: exact;
 
   @include themed() {
     background-color: t($primary);
@@ -64,5 +65,31 @@ h3.title:after,
     @media (min-width: 992px) {
       max-width: 960px !important;
     }
+  }
+
+  @media print {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 40px;
+  }
+}
+
+@media not print {
+  .print {
+    display: none !important;
+  }
+
+  .dont-print {
+    display: block;
+  }
+}
+
+@media print {
+  .print {
+    display: block;
+  }
+
+  .dont-print {
+    display: none !important;
   }
 }

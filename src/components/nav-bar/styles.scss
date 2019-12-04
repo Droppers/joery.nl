@@ -19,6 +19,10 @@
         text-decoration: none;
         font-size: 20px;
 
+        @media print {
+            font-size: 24px;
+        }
+
         @include themed() {
             color: t($text);
         }
@@ -118,6 +122,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media print {
+        .container {
+            justify-content: center !important;
         }
     }
 }

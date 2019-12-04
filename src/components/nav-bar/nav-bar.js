@@ -57,9 +57,10 @@ class NavBar extends React.Component {
               className="d-inline-block align-top"
               alt="Logo"
             />
-            Joery
+            <span className="dont-print">Joery</span>
+            <span className="print">Joery Droppers</span>
           </Link>
-          <nav className="nav d-flex">
+          <nav className="nav d-flex dont-print">
             <NavLink exact className="link" to="/">
               Home
             </NavLink>

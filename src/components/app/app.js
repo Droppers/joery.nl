@@ -15,12 +15,12 @@ class App extends React.Component {
       <BrowserRouter>
         <div id="app" className="home">
           <BackgroundBottom
-            className="corner corner-bottom"
+            className="corner corner-bottom dont-print"
             src="/static/images/background-bottom.svg"
             alt="Bottom"
           />
           <BackgroundTop
-            className="corner corner-top"
+            className="corner corner-top dont-print"
             src="/static/images/background-top.svg"
             alt="Top"
           />

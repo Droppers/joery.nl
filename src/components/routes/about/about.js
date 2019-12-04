@@ -5,6 +5,10 @@ import Bronkhorst from "vector/experience/bronkhorst";
 import ArborMedia from "vector/experience/arbor-media";
 import GraafschapCollege from "vector/experience/graafschap-college";
 import Saxion from "vector/experience/saxion";
+import MapMarker from "vector/icons/map-marker";
+import EmailOutline from "vector/icons/email-outline";
+import CellphoneAndroid from "vector/icons/cellphone-android";
+import Earth from "vector/icons/earth";
 
 class AboutRoute extends React.Component {
   constructor(props) {
@@ -89,15 +93,42 @@ class AboutRoute extends React.Component {
         </MetaTags>
         <div className="row">
           <div className="col-lg-12">
-            <h2 className="title">Mijn informatie</h2>
+            <h2 className="title dont-print">Mijn informatie</h2>
           </div>
-          <div className="col-lg-7 col-md-7">
+          <div class="my-summary col-sm-10 print">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </div>
+          <div className="col-lg-7 col-md-7 about-left">
             <h3 className="title">Werkervaring</h3>
             <Timeline items={work} />
             <h3 className="title">Educatie</h3>
             <Timeline items={education} />
           </div>
-          <div className="col-lg-5 col-md-5">
+          <div className="col-lg-5 col-md-5 about-right">
+            <h3 className="title print">Personalia</h3>
+            <div className="personal-details print">
+              <div class="personal-item">
+                <CellphoneAndroid className="icon" />
+                +31 6 18158333
+              </div>
+              <div class="personal-item">
+                <EmailOutline className="icon" />
+                mail@joery.nl
+              </div>
+              <div class="personal-item">
+                <Earth className="icon" />
+                joery.nl
+              </div>
+              <div class="personal-item">
+                <MapMarker className="icon" />
+                Alexandrinalaan 26, 7271 NN Borculo
+              </div>
+            </div>
             <div className="card">
               <div className="card-content">
                 Lorem ipsum durum, ik weet niet hoe het gaat. Ik ben te lui om
@@ -110,6 +141,13 @@ class AboutRoute extends React.Component {
                 Lorem ipsum durum, ik weet niet hoe het gaat. Ik ben te lui om
                 te zoeken naar lorem ipsum, dus ik typ dit.
               </div>
+            </div>
+
+            <div
+              class="btn btn-primary btn-large print-resume dont-print"
+              onClick={() => window.print()}
+            >
+              CV uitprinten
             </div>
           </div>
         </div>
