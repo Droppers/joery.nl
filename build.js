@@ -1,13 +1,33 @@
-const { readdir, readFile, writeFile, mkdir } = require("fs").promises;
-const { statSync, readdirSync } = require("fs");
+const {
+  readdir,
+  readFile,
+  writeFile,
+  mkdir,
+  rmdir,
+  lstat,
+  unlink
+} = require("fs").promises;
+const { statSync, readdirSync, existsSync } = require("fs");
 const { join, basename, extname } = require("path");
 const imagemin = require("imagemin");
 const imageminWebp = require("imagemin-webp");
 const { default: svgr } = require("@svgr/core");
 
-function flatten(lists) {
-  return lists.reduce((a, b) => a.concat(b), []);
-}
+const flatten = lists => lists.reduce((a, b) => a.concat(b), []);
+
+const deleteDirRecursive = async path => {
+  if (existsSync(path)) {
+    for (const entry of await readdir(path)) {
+      const curPath = path + "/" + entry;
+      if ((await lstat(curPath)).isDirectory()) {
+        await deleteDirRecursive(curPath);
+      } else {
+        await unlink(curPath);
+      }
+    }
+    await rmdir(path);
+  }
+};
 
 const getDirs = path => {
   return readdirSync(path)
@@ -144,8 +164,10 @@ const toCamel = s => {
 };
 
 const svgToJs = async (path, outputPath) => {
-  const directories = await getDirsRecursive(path);
+  // Clean up old images
+  await deleteDirRecursive(outputPath);
 
+  const directories = await getDirsRecursive(path);
   for (const directory of directories) {
     const files = await getFiles(directory, "svg");
 

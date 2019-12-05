@@ -7,6 +7,7 @@
     @include themed() {
         color: t($text);
         background-color: t($bg);
+        -webkit-print-color-adjust: exact;
 
         .logo {
             #prefix__logo-bottom {
@@ -16,6 +17,10 @@
             #prefix__logo-top {
                 fill: t($primary);
             }
+        }
+
+        @media print {
+            background-color: t($card-bg);
         }
     }
 

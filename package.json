@@ -5,6 +5,7 @@
   "dependencies": {
     "@svgr/plugin-prettier": "^4.3.2",
     "node-sass": "^4.13.0",
+    "puppeteer": "^2.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-meta-tags": "^0.7.4",
@@ -16,7 +17,8 @@
     "build": "node build.js pre && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "node build.js post && react-snap"
+    "postbuild": "node build.js post && react-snap && npm run generate-resume",
+    "generate-resume": "node generate-resume.js"
   },
   "eslintConfig": {
     "extends": "react-app"

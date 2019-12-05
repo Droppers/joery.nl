@@ -6,6 +6,10 @@
 
     @include themed() {
         background-color: t($card-bg);
+
+        @media print {
+            background-color: t($bg);
+        }
     }
 
     &.card-hover {

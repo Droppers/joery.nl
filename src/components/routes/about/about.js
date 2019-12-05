@@ -1,14 +1,49 @@
 import React from "react";
 import Timeline from "./timeline/timeline";
 import MetaTags from "react-meta-tags";
+
 import Bronkhorst from "vector/experience/bronkhorst";
 import ArborMedia from "vector/experience/arbor-media";
 import GraafschapCollege from "vector/experience/graafschap-college";
 import Saxion from "vector/experience/saxion";
+
 import MapMarker from "vector/icons/map-marker";
 import EmailOutline from "vector/icons/email-outline";
 import CellphoneAndroid from "vector/icons/cellphone-android";
 import Earth from "vector/icons/earth";
+
+import Csharp from "vector/icons/skills/csharp";
+import Javascript from "vector/icons/skills/javascript";
+import Powershell from "vector/icons/skills/powershell";
+import Sql from "vector/icons/skills/sql";
+import Mysql from "vector/icons/skills/mysql";
+
+const Skills = props => {
+  return (
+    <div className={`icon-list ${props.className || ""}`}>
+      <div className="icon-list-item">
+        <Csharp className="icon" />
+        C#
+      </div>
+      <div className="icon-list-item">
+        <Javascript className="icon" />
+        JavaScript
+      </div>
+      <div className="icon-list-item">
+        <Powershell className="icon" />
+        PowerShell
+      </div>
+      <div className="icon-list-item">
+        <Sql className="icon" />
+        SQL Server
+      </div>
+      <div className="icon-list-item">
+        <Mysql className="icon" />
+        MySQL
+      </div>
+    </div>
+  );
+};
 
 class AboutRoute extends React.Component {
   constructor(props) {
@@ -95,7 +130,7 @@ class AboutRoute extends React.Component {
           <div className="col-lg-12">
             <h2 className="title dont-print">Mijn informatie</h2>
           </div>
-          <div class="my-summary col-sm-10 print">
+          <div className="my-summary col-sm-10 print">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -110,44 +145,51 @@ class AboutRoute extends React.Component {
             <Timeline items={education} />
           </div>
           <div className="col-lg-5 col-md-5 about-right">
+            <div
+              onClick={() =>
+                window.open("/static/cv-joery-droppers.pdf", "_blank")
+              }
+              className="btn btn-primary btn-outline btn-large print-resume dont-print"
+            >
+              Download mijn CV
+            </div>
             <h3 className="title print">Personalia</h3>
-            <div className="personal-details print">
-              <div class="personal-item">
+            <div className="icon-list personal-details print">
+              <div className="icon-list-item">
                 <CellphoneAndroid className="icon" />
                 +31 6 18158333
               </div>
-              <div class="personal-item">
+              <div className="icon-list-item">
                 <EmailOutline className="icon" />
                 mail@joery.nl
               </div>
-              <div class="personal-item">
+              <div className="icon-list-item">
                 <Earth className="icon" />
                 joery.nl
               </div>
-              <div class="personal-item">
+              <div className="icon-list-item">
                 <MapMarker className="icon" />
                 Alexandrinalaan 26, 7271 NN Borculo
               </div>
             </div>
-            <div className="card">
+            <div className="card dont-print">
               <div className="card-content">
-                Lorem ipsum durum, ik weet niet hoe het gaat. Ik ben te lui om
-                te zoeken naar lorem ipsum, dus ik typ dit.
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-title">Programmeren</div>
-              <div className="card-content">
-                Lorem ipsum durum, ik weet niet hoe het gaat. Ik ben te lui om
-                te zoeken naar lorem ipsum, dus ik typ dit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
               </div>
             </div>
 
-            <div
-              class="btn btn-primary btn-large print-resume dont-print"
-              onClick={() => window.print()}
-            >
-              CV uitprinten
+            <h3 className="title print">Vaardigheden</h3>
+            <Skills className="personal-details print" />
+            <div className="card dont-print">
+              <div className="card-title">Vaardigheden</div>
+              <div className="card-content">
+                <Skills />
+              </div>
             </div>
           </div>
         </div>

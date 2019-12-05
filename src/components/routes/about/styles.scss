@@ -13,6 +13,11 @@
 
     .print-resume {
         width: 100%;
+        margin-bottom: 30px;
+
+        @include themed() {
+            background-color: t($bg);
+        }
     }
 
     .my-summary {
@@ -23,18 +28,25 @@
     .personal-details {
         margin-top: 15px;
         margin-bottom: 30px;
+    }
 
-        .personal-item {
+    .icon-list {
+        .icon-list-item {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
             font-size: 15px;
-            ;
 
             >.icon {
                 height: 20px;
-                margin-right: 10px;
-                opacity: .8;
+                width: 20px;
+                margin-right: 20px;
+
+                @include themed() {
+                    >path {
+                        fill: t($text-secondary);
+                    }
+                }
             }
 
             &:last-child {
