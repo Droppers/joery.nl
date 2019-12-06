@@ -38,19 +38,33 @@ $corner-bottom-opacity: 'corner-bottom-opacity';
 
     @each $theme,
     $map in $themes {
-        @media (prefers-color-scheme: #{$theme}) {
-            $theme-map: () !global;
-
-            @each $key,
-            $submap in $map {
-                $value: map-get(map-get($themes, $theme), '#{$key}');
-                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+        @if $theme=='light' {
+            @include apply-styles($theme, $map) {
+                @content;
             }
+        }
 
-            @content;
-            $theme-map: null !global;
+        @else {
+            @media (prefers-color-scheme: #{$theme}) {
+                @include apply-styles($theme, $map) {
+                    @content;
+                }
+            }
         }
     }
+}
+
+@mixin apply-styles($theme, $map) {
+    $theme-map: () !global;
+
+    @each $key,
+    $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+    }
+
+    @content;
+    $theme-map: null !global;
 }
 
 @function t($key) {
