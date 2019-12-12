@@ -23,26 +23,45 @@
         }
     }
 
-    .thumbnails {
+    .thumbnails-card {
+        overflow: hidden;
         margin-top: 30px;
-        margin-bottom: 30px;
-        display: flex;
-        height: 100px;
-        justify-content: center;
 
-        picture {
-            display: block;
-            margin-right: 20px;
-            height: 100%;
+        .thumbnails {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 15px 0;
+
+            @include scrollbar-styles();
+
+            &:after,
+            &:before {
+                content: ' ';
+                min-width: 15px;
+            }
+
+            picture {
+                display: block;
+                margin-right: 20px;
+                height: 100px;
+
+                @include themed() {
+                    .active {
+                        box-shadow: 0px 0px 0px 2px t($primary);
+                    }
+                }
+            }
+
+            picture:last-child {
+                margin-right: 0;
+            }
+
+            .thumbnail {
+                height: 100%;
+                cursor: pointer;
+            }
         }
 
-        picture:last-child {
-            margin-right: 0;
-        }
-
-        .thumbnail {
-            height: 100%;
-            cursor: pointer;
-        }
     }
 }

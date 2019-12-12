@@ -28,7 +28,14 @@ export const allProjects = [
     cover: {
       image: "agar-yt"
     },
-    images: ["/static/images/projects/agar-yt.jpg"]
+    images: [
+      "/static/images/projects/agar-yt/home.jpg",
+      "/static/images/projects/agar-yt/private-games-overview.jpg",
+      "/static/images/projects/agar-yt/private-games-playing.jpg",
+      "/static/images/projects/agar-yt/game-play.jpg",
+      "/static/images/projects/agar-yt/friends-list.jpg",
+      "/static/images/projects/agar-yt/chat.jpg"
+    ]
   },
   {
     slug: "runner",

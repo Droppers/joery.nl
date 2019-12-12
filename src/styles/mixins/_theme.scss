@@ -8,7 +8,8 @@ $themes: (light: (primary: #3445e7,
         icon-filter: "",
         logo-secondary: rgb(102, 69, 232),
         corner-top-opacity: 1,
-        corner-bottom-opacity: 1),
+        corner-bottom-opacity: 1,
+        scrollbar-thumb: #6d7bff),
     dark: (bg: #292929,
         primary: #6d7bff,
         secondary: purple,
@@ -19,7 +20,8 @@ $themes: (light: (primary: #3445e7,
         icon-filter: brightness(0) invert(1) opacity(0.8),
         logo-secondary: rgb(145, 120, 242),
         corner-top-opacity: .5,
-        corner-bottom-opacity: .65));
+        corner-bottom-opacity: .65,
+        scrollbar-thumb: #6d7bff));
 
 $bg: 'bg';
 $card-bg: 'card-bg';
@@ -33,6 +35,8 @@ $logo-secondary: 'logo-secondary';
 
 $corner-top-opacity: 'corner-top-opacity';
 $corner-bottom-opacity: 'corner-bottom-opacity';
+
+$scrollbar-thumb: 'scrollbar-thumb';
 
 @mixin themed() {
 
@@ -69,4 +73,28 @@ $corner-bottom-opacity: 'corner-bottom-opacity';
 
 @function t($key) {
     @return map-get($theme-map, $key);
+}
+
+@mixin scrollbar-styles() {
+    @include themed() {
+        scrollbar-color: t($scrollbar-thumb) t($card-bg);
+        scrollbar-width: thin;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @include themed() {
+            background: t($scrollbar-thumb);
+            border: 1px solid t($card-bg);
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        @include themed() {
+            background: t($card-bg);
+        }
+    }
 }

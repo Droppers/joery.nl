@@ -46,17 +46,22 @@ class ImageGallery extends React.Component {
             />
           )}
         </div>
-        <div className="thumbnails">
-          {images.map((image, key) => (
-            <Image
-              key={key}
-              className="thumbnail card card-hover"
-              alt=""
-              src={image}
-              onLoad={e => this.onLoad(e.target, image)}
-              onClick={e => this.handleChange(e.target, image)}
-            />
-          ))}
+        <div className="card thumbnails-card">
+          <div className="thumbnails scroll">
+            {images.map((image, key) => (
+              <Image
+                key={key}
+                className={
+                  "thumbnail card card-hover " +
+                  (image === activeImage ? "active" : "")
+                }
+                alt=""
+                src={image}
+                onLoad={e => this.onLoad(e.target, image)}
+                onClick={e => this.handleChange(e.target, image)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );
