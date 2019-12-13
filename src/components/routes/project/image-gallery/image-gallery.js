@@ -9,24 +9,36 @@ class ImageGallery extends React.Component {
       activeImage: null,
       orientation: "portrait"
     };
-
-    this.image = React.createRef();
   }
 
-  handleChange(input, image) {
-    const orientation =
-      input.naturalHeight > input.naturalWidth ? "portrait" : "landscape";
+  componentDidUpdate() {
+    const { activeImage } = this.state;
+    const { images } = this.props;
+
+    if (!activeImage && images.length > 0) {
+      this.setState({
+        activeImage: images[0]
+      });
+    }
+  }
+
+  handleChange(image) {
+    const orientation = image.height > image.width ? "portrait" : "landscape";
+    console.log(image.height, image.width);
     this.setState({
       activeImage: image,
       orientation: orientation
     });
   }
 
-  onLoad(input, image) {
-    const { images } = this.props;
+  getThumbnail(src) {
+    const development =
+      !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
-    if (image === images[0]) {
-      this.handleChange(input, image);
+    if (development) {
+      return src;
+    } else {
+      return src.substr(0, src.lastIndexOf(".")) + "-thumb.jpg";
     }
   }
 
@@ -42,12 +54,12 @@ class ImageGallery extends React.Component {
               ref={this.image}
               className={"image card " + orientation}
               alt=""
-              src={activeImage}
+              src={activeImage.src}
             />
           )}
         </div>
         <div className="card thumbnails-card">
-          <div className="thumbnails scroll">
+          <div className="thumbnails">
             {images.map((image, key) => (
               <Image
                 key={key}
@@ -55,10 +67,13 @@ class ImageGallery extends React.Component {
                   "thumbnail card card-hover " +
                   (image === activeImage ? "active" : "")
                 }
+                style={{
+                  height: 100,
+                  width: 100 * (image.width / image.height) + "px"
+                }}
                 alt=""
-                src={image}
-                onLoad={e => this.onLoad(e.target, image)}
-                onClick={e => this.handleChange(e.target, image)}
+                src={this.getThumbnail(image.src)}
+                onClick={() => this.handleChange(image)}
               />
             ))}
           </div>

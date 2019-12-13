@@ -1,33 +1,13 @@
-const {
-  readdir,
-  readFile,
-  writeFile,
-  mkdir,
-  rmdir,
-  lstat,
-  unlink
-} = require("fs").promises;
+const { readdir, readFile, writeFile, mkdir } = require("fs").promises;
+const rimraf = require("rimraf");
 const { statSync, readdirSync, existsSync } = require("fs");
 const { join, basename, extname } = require("path");
 const imagemin = require("imagemin");
 const imageminWebp = require("imagemin-webp");
 const { default: svgr } = require("@svgr/core");
+const sharp = require("sharp");
 
 const flatten = lists => lists.reduce((a, b) => a.concat(b), []);
-
-const deleteDirRecursive = async path => {
-  if (existsSync(path)) {
-    for (const entry of await readdir(path)) {
-      const curPath = path + "/" + entry;
-      if ((await lstat(curPath)).isDirectory()) {
-        await deleteDirRecursive(curPath);
-      } else {
-        await unlink(curPath);
-      }
-    }
-    await rmdir(path);
-  }
-};
 
 const getDirs = path => {
   return readdirSync(path)
@@ -165,7 +145,7 @@ const toCamel = s => {
 
 const svgToJs = async (path, outputPath) => {
   // Clean up old images
-  await deleteDirRecursive(outputPath);
+  rimraf.sync(outputPath);
 
   const directories = await getDirsRecursive(path);
   for (const directory of directories) {
@@ -199,6 +179,23 @@ const svgToJs = async (path, outputPath) => {
   }
 };
 
+const generateThumbs = async path => {
+  const directories = getDirsRecursive(path);
+  for (const directory of directories) {
+    const files = await getFiles(directory, "jpg");
+
+    for (const file of files) {
+      const output = file.substr(0, file.lastIndexOf(".")) + "-thumb.jpg";
+      await sharp(file)
+        .resize({ height: 350 })
+        .jpeg()
+        .toFile(output);
+
+      console.log("Generated thumbnail", output);
+    }
+  }
+};
+
 (async () => {
   const type = process.argv[2];
   if (type === "pre") {
@@ -206,6 +203,9 @@ const svgToJs = async (path, outputPath) => {
     const vectorPath = "src/vector";
     await svgToJs(staticPath, vectorPath);
   } else if (type === "post") {
+    const thumbPath = "build/static/images/projects";
+    await generateThumbs(thumbPath);
+
     const imagePath = "build/static/images";
     await generateWebp(imagePath);
   }

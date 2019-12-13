@@ -14,8 +14,41 @@ export const allProjects = [
       icon: "bedtime-icon"
     },
     images: [
-      "/static/images/projects/bedtime-left.jpg",
-      "/static/images/projects/bedtime-right.jpg"
+      {
+        src: "/static/images/projects/bedtime/1-alarm-light.jpg",
+        width: 1080,
+        height: 1920
+      },
+      {
+        src: "/static/images/projects/bedtime/1-alarm-dark.jpg",
+        width: 1080,
+        height: 1920
+      },
+      {
+        src: "/static/images/projects/bedtime/2-stopwatch-light.jpg",
+        width: 1080,
+        height: 1920
+      },
+      {
+        src: "/static/images/projects/bedtime/2-stopwatch-dark.jpg",
+        width: 1080,
+        height: 1920
+      },
+      {
+        src: "/static/images/projects/bedtime/3-timer-light.jpg",
+        width: 1080,
+        height: 1920
+      },
+      {
+        src: "/static/images/projects/bedtime/3-timer-dark.jpg",
+        width: 1080,
+        height: 1920
+      },
+      {
+        src: "/static/images/projects/bedtime/4-challenge-dark.jpg",
+        width: 1080,
+        height: 1920
+      }
     ]
   },
   {
@@ -29,12 +62,36 @@ export const allProjects = [
       image: "agar-yt"
     },
     images: [
-      "/static/images/projects/agar-yt/home.jpg",
-      "/static/images/projects/agar-yt/private-games-overview.jpg",
-      "/static/images/projects/agar-yt/private-games-playing.jpg",
-      "/static/images/projects/agar-yt/game-play.jpg",
-      "/static/images/projects/agar-yt/friends-list.jpg",
-      "/static/images/projects/agar-yt/chat.jpg"
+      {
+        src: "/static/images/projects/agar-yt/home.jpg",
+        width: 1000,
+        height: 667
+      },
+      {
+        src: "/static/images/projects/agar-yt/private-games-overview.jpg",
+        width: 1000,
+        height: 667
+      },
+      {
+        src: "/static/images/projects/agar-yt/private-games-playing.jpg",
+        width: 1000,
+        height: 667
+      },
+      {
+        src: "/static/images/projects/agar-yt/game-play.jpg",
+        width: 1000,
+        height: 667
+      },
+      {
+        src: "/static/images/projects/agar-yt/friends-list.jpg",
+        width: 1000,
+        height: 667
+      },
+      {
+        src: "/static/images/projects/agar-yt/chat.jpg",
+        width: 1000,
+        height: 667
+      }
     ]
   },
   {
@@ -52,8 +109,16 @@ export const allProjects = [
       icon: "runner-icon"
     },
     images: [
-      "/static/images/projects/runner-left.jpg",
-      "/static/images/projects/runner-right.jpg"
+      {
+        src: "/static/images/projects/runner-left.jpg",
+        width: 1080,
+        height: 1920
+      },
+      {
+        src: "/static/images/projects/runner-right.jpg",
+        width: 1080,
+        height: 1920
+      }
     ]
   }
 ];
