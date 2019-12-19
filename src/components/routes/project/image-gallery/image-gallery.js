@@ -16,6 +16,7 @@ class ImageGallery extends React.Component {
     const { images } = this.props;
 
     if (!activeImage && images.length > 0) {
+      this.handleChange(images[0]);
       this.setState({
         activeImage: images[0]
       });
@@ -24,7 +25,6 @@ class ImageGallery extends React.Component {
 
   handleChange(image) {
     const orientation = image.height > image.width ? "portrait" : "landscape";
-    console.log(image.height, image.width);
     this.setState({
       activeImage: image,
       orientation: orientation

@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 
-const typeMapping = {
-  png: "image/png",
-  jpg: "image/jpeg"
-};
-
 class Image extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.supportsWebp = this.supportsWebp();
+  }
+
   supportsWebp() {
     if (typeof window.supportsWebp !== "undefined") return window.supportsWebp;
 
@@ -23,25 +24,15 @@ class Image extends React.Component {
     const development =
       !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
-    const { src } = this.props;
-    let webpSrc = "";
-    let type = "";
+    let { src } = this.props;
     if (src) {
-      webpSrc = src.substr(0, src.lastIndexOf(".")) + ".webp";
-
-      const extension = src.split(".").pop();
-      type = typeMapping[extension];
+      const webpSrc = src.substr(0, src.lastIndexOf(".")) + ".webp";
+      if (!development) {
+        src = this.supportsWebp ? webpSrc : src;
+      }
     }
 
-    const renderSource = !development && src;
-
-    return (
-      <picture>
-        {renderSource && <source srcSet={webpSrc} type="image/webp" />}
-        {renderSource && <source srcSet={src} type={type} />}
-        <img {...this.props} />
-      </picture>
-    );
+    return <img {...this.props} src={src} />;
   }
 }
 

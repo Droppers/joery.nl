@@ -3,12 +3,13 @@
         display: flex;
         max-height: 400px;
         justify-content: center;
+        margin-bottom: 30px;
 
         .image {
             margin-bottom: 0;
 
             &.portrait {
-                max-height: 100%;
+                max-height: 400px;
             }
 
             &.landscape {
@@ -16,45 +17,37 @@
             }
         }
 
-        picture {
+        img {
             display: block;
-            width: 100%;
-            text-align: center;
         }
     }
 
     .thumbnails-card {
         overflow: hidden;
-        margin-top: 30px;
 
         .thumbnails {
-            display: flex;
             overflow-x: auto;
             overflow-y: hidden;
-            padding: 15px 0;
+            padding: 15px;
+            white-space: nowrap;
 
             @include scrollbar-styles();
 
-            &:after,
-            &:before {
-                content: ' ';
-                min-width: 15px;
-            }
-
-            picture {
-                display: block;
+            img {
+                display: inline-block;
+                margin-bottom: 0;
                 margin-right: 20px;
                 height: 100px;
 
+                &:last-child {
+                    margin-right: 0;
+                }
+
                 @include themed() {
-                    .active {
+                    &.active {
                         box-shadow: 0px 0px 0px 2px t($primary);
                     }
                 }
-            }
-
-            picture:last-child {
-                margin-right: 0;
             }
 
             .thumbnail {
@@ -62,6 +55,5 @@
                 cursor: pointer;
             }
         }
-
     }
 }

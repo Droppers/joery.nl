@@ -7,10 +7,10 @@ class SocialIcons extends React.Component {
     return (
       <div className="social-icons">
         <a href="https://github.com/droppers" aria-label="Github" className="icon">
-          <Linkedin alt="Github" src="/static/icons/github.svg" />
+          <Github alt="Github" />
         </a>
         <a href="https://linkedin.com" aria-label="LinkedIn" className="icon">
-          <Github alt="LinkedIn" src="/static/icons/linkedin.svg" />
+          <Linkedin alt="LinkedIn" />
         </a>
       </div>
     );

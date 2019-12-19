@@ -86,11 +86,6 @@ export const allProjects = [
         src: "/static/images/projects/agar-yt/friends-list.jpg",
         width: 1000,
         height: 667
-      },
-      {
-        src: "/static/images/projects/agar-yt/chat.jpg",
-        width: 1000,
-        height: 667
       }
     ]
   },
