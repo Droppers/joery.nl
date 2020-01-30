@@ -1,27 +1,29 @@
 $themes: (light: (primary: #3445e7,
-        secondary: orange,
+        secondary: #000,
         bg: #f6f6f6,
         card-bg: #FFF,
         text: #000,
-        text-secondary: rgba(0, 0, 0, .7),
+        text-secondary: rgba(0, 0, 0, 0.7),
         timeline: #aeb4f2,
         icon-filter: "",
-        logo-secondary: rgb(102, 69, 232),
+        logo-primary: #3445e7,
+        logo-secondary: #6645e8,
         corner-top-opacity: 1,
         corner-bottom-opacity: 1,
         scrollbar-thumb: #6d7bff),
     dark: (bg: #292929,
-        primary: #6d7bff,
-        secondary: purple,
+        primary: #9aa4ff,
+        secondary: #FFF,
         card-bg: #313131,
         text: #FFF,
         text-secondary: rgba(255, 255, 255, .85),
         timeline: #646464,
         icon-filter: brightness(0) invert(1),
-        logo-secondary: rgb(145, 120, 242),
-        corner-top-opacity: .5,
-        corner-bottom-opacity: .65,
-        scrollbar-thumb: #6d7bff));
+        logo-primary: #6d7bff,
+        logo-secondary: #9178f2,
+        corner-top-opacity: .35,
+        corner-bottom-opacity: .55,
+        scrollbar-thumb: #9aa4ff));
 
 $bg: 'bg';
 $card-bg: 'card-bg';
@@ -31,6 +33,8 @@ $text: 'text';
 $text-secondary: 'text-secondary';
 $timeline: 'timeline';
 $icon-filter: 'icon-filter';
+
+$logo-primary: 'logo-primary';
 $logo-secondary: 'logo-secondary';
 
 $corner-top-opacity: 'corner-top-opacity';

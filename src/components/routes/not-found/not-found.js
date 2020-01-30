@@ -13,8 +13,8 @@ class NotFoundRoute extends React.Component {
         </MetaTags>
         <div class="four-o-four">404</div>
         <h2 class="title">Pagina niet gevonden</h2>
-        <a href="/" class="btn btn-primary go-home">
-          Ga terug naar home
+        <a href="/" class="btn btn-primary btn-outline go-home">
+          Terug naar het begin
         </a>
       </div>
     );
