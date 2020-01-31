@@ -1,23 +1,8 @@
 #about {
-    @media print {
-        .about-left {
-            flex: 0 0 58.3333333333%;
-            max-width: 58.3333333333%;
-        }
-
-        .about-right {
-            flex: 0 0 41.6666666667%;
-            max-width: 41.6666666667%;
-        }
-    }
-
     .print-resume {
         width: 100%;
         margin-bottom: 30px;
-
-        @include themed() {
-            background-color: t($card-bg);
-        }
+        background-color: var(--card-bg);
     }
 
     .my-summary {
@@ -42,16 +27,26 @@
                 width: 20px;
                 margin-right: 20px;
 
-                @include themed() {
-                    >path {
-                        fill: t($text-secondary);
-                    }
+                >path {
+                    fill: var(--text-secondary);
                 }
             }
 
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    @media print {
+        .about-left {
+            flex: 0 0 58.3333333333%;
+            max-width: 58.3333333333%;
+        }
+
+        .about-right {
+            flex: 0 0 41.6666666667%;
+            max-width: 41.6666666667%;
         }
     }
 }

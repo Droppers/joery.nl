@@ -3,13 +3,10 @@
     transition: box-shadow 300ms;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.12);
     margin-bottom: 30px;
+    background-color: var(--card-bg);
 
-    @include themed() {
-        background-color: t($card-bg);
-
-        @media print {
-            background-color: t($bg);
-        }
+    @media print {
+        background-color: var(--bg);
     }
 
     &.card-hover {

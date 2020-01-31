@@ -1,104 +1,33 @@
-$themes: (light: (primary: #3445e7,
-        secondary: #000,
-        bg: #f6f6f6,
-        card-bg: #FFF,
-        text: #000,
-        text-secondary: rgba(0, 0, 0, 0.7),
-        timeline: #aeb4f2,
-        icon-filter: "",
-        logo-primary: #3445e7,
-        logo-secondary: #6645e8,
-        corner-top-opacity: 1,
-        corner-bottom-opacity: 1,
-        scrollbar-thumb: #6d7bff),
-    dark: (bg: #292929,
-        primary: #9aa4ff,
-        secondary: #FFF,
-        card-bg: #313131,
-        text: #FFF,
-        text-secondary: rgba(255, 255, 255, .85),
-        timeline: #646464,
-        icon-filter: brightness(0) invert(1),
-        logo-primary: #6d7bff,
-        logo-secondary: #9178f2,
-        corner-top-opacity: .35,
-        corner-bottom-opacity: .55,
-        scrollbar-thumb: #9aa4ff));
-
-$bg: 'bg';
-$card-bg: 'card-bg';
-$primary: 'primary';
-$secondary: 'secondary';
-$text: 'text';
-$text-secondary: 'text-secondary';
-$timeline: 'timeline';
-$icon-filter: 'icon-filter';
-
-$logo-primary: 'logo-primary';
-$logo-secondary: 'logo-secondary';
-
-$corner-top-opacity: 'corner-top-opacity';
-$corner-bottom-opacity: 'corner-bottom-opacity';
-
-$scrollbar-thumb: 'scrollbar-thumb';
-
-@mixin themed() {
-
-    @each $theme,
-    $map in $themes {
-        @if $theme=='light' {
-            @include apply-styles($theme, $map) {
-                @content;
-            }
-        }
-
-        @else {
-            @media (prefers-color-scheme: #{$theme}) {
-                @include apply-styles($theme, $map) {
-                    @content;
-                }
-            }
-        }
-    }
+:root {
+    --primary: #3445e7;
+    --secondary: #000;
+    --bg: #f6f6f6;
+    --card-bg: #FFF;
+    --text: #000;
+    --text-secondary: rgba(0, 0, 0, 0.7);
+    --timeline: #aeb4f2;
+    --icon-filter: "";
+    --logo-primary: #3445e7;
+    --logo-secondary: #6645e8;
+    --corner-top-opacity: 1;
+    --corner-bottom-opacity: 1;
+    --scrollbar-thumb: #6d7bff;
 }
 
-@mixin apply-styles($theme, $map) {
-    $theme-map: () !global;
-
-    @each $key,
-    $submap in $map {
-        $value: map-get(map-get($themes, $theme), '#{$key}');
-        $theme-map: map-merge($theme-map, ($key: $value)) !global;
-    }
-
-    @content;
-    $theme-map: null !global;
-}
-
-@function t($key) {
-    @return map-get($theme-map, $key);
-}
-
-@mixin scrollbar-styles() {
-    @include themed() {
-        scrollbar-color: t($scrollbar-thumb) t($card-bg);
-        scrollbar-width: thin;
-    }
-
-    &::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        @include themed() {
-            background: t($scrollbar-thumb);
-            border: 1px solid t($card-bg);
-        }
-    }
-
-    &::-webkit-scrollbar-track {
-        @include themed() {
-            background: t($card-bg);
-        }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #9aa4ff;
+        --secondary: #FFF;
+        --bg: #292929;
+        --card-bg: #313131;
+        --text: #FFF;
+        --text-secondary: rgba(255, 255, 255, .85);
+        --timeline: #646464;
+        --icon-filter: brightness(0) invert(1);
+        --logo-primary: #6d7bff;
+        --logo-secondary: #9178f2;
+        --corner-top-opacity: .35;
+        --corner-bottom-opacity: .55;
+        --scrollbar-thumb: #9aa4ff;
     }
 }

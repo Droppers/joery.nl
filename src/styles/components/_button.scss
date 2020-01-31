@@ -14,14 +14,12 @@
         padding: 12px 16px;
     }
 
-    @include themed() {
-        &.btn-primary {
-            background: t($primary);
-            color: #fff;
+    &.btn-primary {
+        background: var(--primary);
+        color: #fff;
 
-            &.btn-outline {
-                border: 1px solid t($primary);
-            }
+        &.btn-outline {
+            border: 1px solid var(--primary);
         }
     }
 
@@ -47,17 +45,16 @@
     &.btn-text,
     &.btn-outline {
         background: transparent;
+        color: var(--primary);
 
-        @include themed() {
-            color: t($primary);
+        &:hover:after {
+            background-color: var(--primary);
+            opacity: .15;
+        }
 
-            &:hover:after {
-                background-color: adjust-color(t($primary), $alpha: -0.85);
-            }
-
-            &:active:after {
-                background-color: adjust-color(t($primary), $alpha: -0.75);
-            }
+        &:active:after {
+            background-color: var(--primary);
+            opacity: .25;
         }
     }
 }

@@ -3,8 +3,6 @@ body.no-margin {
   margin: 0;
   min-height: 100%;
   font-family: "Google Sans", Helvetica, Arial, Sans-Serif;
-
-  @include scrollbar-styles();
 }
 
 section.content {
@@ -50,10 +48,7 @@ h3.title:after,
   vertical-align: bottom;
   display: inline-block;
   -webkit-print-color-adjust: exact;
-
-  @include themed() {
-    background-color: t($primary);
-  }
+  background-color: var(--primary);
 }
 
 .page-content {

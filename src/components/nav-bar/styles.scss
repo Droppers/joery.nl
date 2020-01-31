@@ -5,10 +5,7 @@
     top: 0;
     z-index: 10;
     transition: background-color 400ms, box-shadow 400ms;
-
-    @include themed() {
-        background-color: t($card-bg);
-    }
+    background-color: var(--card-bg);
 
     .container {
         height: $nav-bar-height;
@@ -18,13 +15,10 @@
         align-items: center;
         text-decoration: none;
         font-size: 20px;
+        color: var(--text);
 
         @media print {
             font-size: 24px;
-        }
-
-        @include themed() {
-            color: t($text);
         }
 
         svg {
@@ -34,10 +28,6 @@
 
     .nav {
         .link {
-            &:first-child {
-                margin-left: 0;
-            }
-
             text-decoration: none;
             padding: 0 12px;
             display: flex;
@@ -45,9 +35,10 @@
             margin-left: 20px;
             position: relative;
             font-size: 15px;
+            color: var(--text);
 
-            @include themed() {
-                color: t($text);
+            &:first-child {
+                margin-left: 0;
             }
 
             &:after {
@@ -62,12 +53,9 @@
                 transition: background-color 250ms;
             }
 
-            @include themed() {
-
-                &.active:after,
-                &:hover:after {
-                    background-color: t($primary);
-                }
+            &.active:after,
+            &:hover:after {
+                background-color: var(--primary);
             }
         }
     }
@@ -91,10 +79,8 @@
     @media screen and (max-width: 768px) {
         position: relative;
         box-shadow: none;
-
-        @include themed() {
-            border-bottom: 1px solid darken(t($card-bg), 6%);
-        }
+        // border-bottom: 1px solid darken(var(--card-bg), 6%);
+        border-bottom: 1px solid var(--card-bg); // TODO: find an alternative
 
         .container {
             flex-direction: column;
