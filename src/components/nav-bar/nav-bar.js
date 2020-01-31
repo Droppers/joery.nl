@@ -14,7 +14,7 @@ class NavBar extends React.Component {
 
   componentDidMount() {
     this.unlisten = this.props.history.listen((location, action) => {
-      this.routeUpdated(location);
+      this.routeChanged(location);
     });
 
     window.addEventListener("scroll", () => this.handleScroll());
@@ -27,11 +27,11 @@ class NavBar extends React.Component {
 
   handleScroll() {
     this.setState({
-      transparent: window.scrollY < 50
+      transparent: window.pageYOffset < 50
     });
   }
 
-  routeUpdated(location) {
+  routeChanged(location) {
     window.scrollTo(0, 0);
 
     this.setState({
