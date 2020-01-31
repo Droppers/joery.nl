@@ -32,7 +32,7 @@ class Image extends React.Component {
       }
     }
 
-    return <img {...this.props} src={src} />;
+    return <img {...this.props} src={src} loading="lazy" />;
   }
 }
 
