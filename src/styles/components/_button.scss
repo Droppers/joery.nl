@@ -47,6 +47,10 @@
         background: transparent;
         color: var(--primary);
 
+        &:after {
+            opacity: .15;
+        }
+
         &:hover:after {
             background-color: var(--primary);
             opacity: .15;

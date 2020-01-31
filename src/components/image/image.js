@@ -5,34 +5,39 @@ class Image extends React.Component {
   constructor(props) {
     super(props);
 
-    this.supportsWebp = this.supportsWebp();
+    this.state = {
+      webp: !!window.webp
+    };
   }
 
-  supportsWebp() {
-    if (typeof window.supportsWebp !== "undefined") return window.supportsWebp;
+  componentDidMount() {
+    if (typeof window.webp === "undefined") {
+      const webpTest = new Image();
+      webpTest.src =
+        "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+      webpTest.onload = webpTest.onerror = () => {
+        window.webp = webpTest.height === 2;
 
-    const elem =
-      typeof document === "object" ? document.createElement("canvas") : {};
-
-    window.supportsWebp =
-      elem.toDataURL("image/webp").indexOf("data:image/webp") === 0;
-
-    return window.supportsWebp;
+        this.setState({ webp: window.webp });
+      };
+    }
   }
 
   render() {
     const development =
       !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
-    let { src } = this.props;
-    if (src) {
-      const webpSrc = src.substr(0, src.lastIndexOf(".")) + ".webp";
-      if (!development) {
-        src = this.supportsWebp ? webpSrc : src;
+    const { webp } = this.state;
+    let { ...props } = this.props;
+    if (props.src && !development) {
+      if (webp) {
+        const webpSrc =
+          props.src.substr(0, props.src.lastIndexOf(".")) + ".webp";
+        props.src = webpSrc;
       }
     }
 
-    return <img {...this.props} src={src} loading="lazy" />;
+    return <img {...props} key={props.src} loading="lazy" />;
   }
 }
 
