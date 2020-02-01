@@ -1,5 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Image from "../../../image/image";
+import ImageThumbnails from "./image-thumbnails/image-thumbnails";
+import ImageModal from "./image-modal/image-modal";
 
 class ImageGallery extends React.Component {
   constructor(props) {
@@ -7,7 +10,8 @@ class ImageGallery extends React.Component {
 
     this.state = {
       activeImage: null,
-      orientation: "portrait"
+      orientation: "portrait",
+      modalOpen: false
     };
   }
 
@@ -42,45 +46,57 @@ class ImageGallery extends React.Component {
     }
   }
 
+  openModal() {
+    this.setState({
+      modalOpen: true
+    });
+  }
+
+  closeModal() {
+    if (this.state.modalOpen) {
+      this.setState({
+        modalOpen: false
+      });
+    }
+  }
+
   render() {
-    const { activeImage, orientation } = this.state;
+    const { activeImage, orientation, modalOpen } = this.state;
     const { images } = this.props;
 
     return (
       <div className="image-gallery">
+        <ImageModal
+          isOpen={modalOpen}
+          images={images}
+          initialActiveImage={activeImage}
+          onModalClose={() => this.closeModal()}
+        />
         <div className="image-container">
           {activeImage && (
             <Image
               ref={this.image}
               className={"image card " + orientation}
               alt=""
+              onClick={() => this.openModal()}
               src={activeImage.src}
             />
           )}
         </div>
         <div className="card thumbnails-card">
-          <div className="thumbnails">
-            {images.map((image, key) => (
-              <Image
-                key={key}
-                className={
-                  "thumbnail card card-hover " +
-                  (image === activeImage ? "active" : "")
-                }
-                style={{
-                  height: 100,
-                  width: 100 * (image.width / image.height) + "px"
-                }}
-                alt=""
-                src={this.getThumbnail(image.src)}
-                onClick={() => this.handleChange(image)}
-              />
-            ))}
-          </div>
+          <ImageThumbnails
+            images={images}
+            activeImage={activeImage}
+            onActiveChange={image => this.handleChange(image)}
+          />
         </div>
       </div>
     );
   }
 }
+
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default ImageGallery;
