@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import { isMSIE } from "../../utils/browser";
 
 class Image extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class Image extends React.Component {
     this.state = {
       webp: !!window.webp
     };
+    this.imageRef = React.createRef();
   }
 
   componentDidMount() {
@@ -20,6 +22,20 @@ class Image extends React.Component {
 
         this.setState({ webp: window.webp });
       };
+    }
+
+    // I have really no idea why this is necessary for internet explorer
+    if (isMSIE()) {
+      const onloadInterval = setInterval(() => {
+        if (!this.imageRef.current) return;
+
+        if (this.imageRef.current.naturalHeight > 0) {
+          if (this.props.onLoad) {
+            this.props.onLoad({ target: this.imageRef.current });
+          }
+          clearInterval(onloadInterval);
+        }
+      }, 100);
     }
   }
 
@@ -37,7 +53,7 @@ class Image extends React.Component {
       }
     }
 
-    return <img {...props} key={props.src} loading="lazy" />;
+    return <img ref={this.imageRef} {...props} loading="lazy" />;
   }
 }
 

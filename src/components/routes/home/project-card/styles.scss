@@ -37,20 +37,10 @@
                 z-index: 5;
             }
 
-            .phone {
-                background: black;
+            .phone-frame {
                 height: 100%;
-                border: 3px transparent solid;
-                border-top-width: 6px;
-                border-bottom-width: 8px;
-                border-radius: 8px;
                 position: absolute;
                 opacity: 0.85;
-
-                img {
-                    height: 100%;
-                    border-radius: 6px;
-                }
 
                 &.left {
                     transform: rotate(-25deg) scale(1.2) translate(0%, 0%);

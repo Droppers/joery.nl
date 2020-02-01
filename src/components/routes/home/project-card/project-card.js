@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Image from "../../../image/image";
+import PhoneFrame from "./phone-frame/phone-frame";
 
 class ProjectCard extends React.Component {
   render() {
@@ -20,26 +21,22 @@ class ProjectCard extends React.Component {
                 ")"
             }}
           >
-            <div className="phone left">
-              <Image
-                alt="Voorbeeld rechts"
-                src={
-                  "../static/images/projects/" +
-                  project.cover.image_left +
-                  ".jpg"
-                }
-              />
-            </div>
-            <div className="phone right">
-              <Image
-                alt="Voorbeeld links"
-                src={
-                  "../static/images/projects/" +
-                  project.cover.image_right +
-                  ".jpg"
-                }
-              />
-            </div>
+            <PhoneFrame
+              className="left"
+              src={
+                "../static/images/projects/" + project.cover.image_left + ".jpg"
+              }
+              alt="Left preview"
+            />
+            <PhoneFrame
+              className="right"
+              src={
+                "../static/images/projects/" +
+                project.cover.image_right +
+                ".jpg"
+              }
+              alt="Right preview"
+            />
             <div className="icon">
               <Image
                 alt="App icoon"

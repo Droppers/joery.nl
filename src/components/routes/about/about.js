@@ -1,6 +1,7 @@
 import React from "react";
 import Timeline from "./timeline/timeline";
 import MetaTags from "react-meta-tags";
+import classnames from "classnames";
 
 import Bronkhorst from "vector/experience/bronkhorst";
 import ArborMedia from "vector/experience/arbor-media";
@@ -20,7 +21,7 @@ import Mysql from "vector/icons/skills/mysql";
 
 const Skills = props => {
   return (
-    <div className={`icon-list ${props.className || ""}`}>
+    <div className={classnames("icon-list", props.className)}>
       <div className="icon-list-item">
         <Csharp className="icon" />
         C#
