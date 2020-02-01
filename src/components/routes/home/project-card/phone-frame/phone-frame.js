@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../../../../image/image";
 import classnames from "classnames";
-import { isMSIE } from "../../../../../utils/browser";
+import { isWebkit } from "../../../../../utils/browser";
 
 class PhoneFrame extends React.Component {
   constructor(props) {
@@ -17,13 +17,13 @@ class PhoneFrame extends React.Component {
   }
 
   componentDidMount() {
-    if (isMSIE()) {
+    if (!isWebkit()) {
       window.addEventListener("resize", this.onResize);
     }
   }
 
   componentWillUnmount() {
-    if (isMSIE()) {
+    if (!isWebkit()) {
       window.removeEventListener("resize", this.onResize);
     }
   }
@@ -33,7 +33,7 @@ class PhoneFrame extends React.Component {
   };
 
   onLoad = e => {
-    if (isMSIE()) {
+    if (!isWebkit()) {
       this.image = e.target;
       this.updateImageSize();
     }
