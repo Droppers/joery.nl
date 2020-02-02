@@ -1,12 +1,20 @@
 .phone-frame {
     background: black;
-    height: 100%;
     border: 3px transparent solid;
     border-top-width: 6px;
     border-bottom-width: 8px;
     border-radius: 8px;
-    position: absolute;
-    opacity: 0.85;
+    transition: opacity 400ms;
+
+    &.phone-invisible {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &.phone-visible {
+        visibility: visible;
+        opacity: 1;
+    }
 
     img {
         height: 100%;

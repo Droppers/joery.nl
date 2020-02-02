@@ -12,7 +12,8 @@ class PhoneFrame extends React.Component {
 
     this.state = {
       height: 0,
-      width: 0
+      width: 0,
+      isLoading: true
     };
   }
 
@@ -36,6 +37,10 @@ class PhoneFrame extends React.Component {
     if (!isWebkit()) {
       this.image = e.target;
       this.updateImageSize();
+    } else {
+      this.setState({
+        isLoading: false
+      });
     }
   };
 
@@ -46,13 +51,14 @@ class PhoneFrame extends React.Component {
     const height = parseInt(computedStyle.getPropertyValue("height"), 10);
     this.setState({
       width: (this.image.naturalWidth / this.image.naturalHeight) * height,
-      height: height
+      height: height,
+      isLoading: false
     });
   }
 
   render() {
     const { src, className } = this.props;
-    const { width, height } = this.state;
+    const { width, height, isLoading } = this.state;
 
     let imageProps = {};
     if (width && height) {
@@ -63,7 +69,14 @@ class PhoneFrame extends React.Component {
     }
 
     return (
-      <div className={classnames("phone-frame", className)} ref={this.phoneRef}>
+      <div
+        className={classnames(
+          "phone-frame",
+          className,
+          isLoading ? "phone-invisible" : "phone-visible"
+        )}
+        ref={this.phoneRef}
+      >
         <Image
           alt="todo"
           src={src}

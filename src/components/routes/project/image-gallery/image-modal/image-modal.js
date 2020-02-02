@@ -4,6 +4,7 @@ import classnames from "classnames";
 import Image from "../../../../image/image";
 import ImageThumbnails from "../image-thumbnails/image-thumbnails";
 import { isMSIE } from "../../../../../utils/browser";
+import Close from "vector/icons/close";
 
 class ImageModal extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class ImageModal extends React.Component {
 
     this.state = {
       isOpen: false,
-      activeImage: null
+      activeImage: null,
+      fullSize: false
     };
   }
 
@@ -58,14 +60,23 @@ class ImageModal extends React.Component {
     }
   }
 
+  toggleFullSize(e) {
+    e.stopPropagation();
+
+    this.setState({
+      fullSize: !this.state.fullSize
+    });
+  }
+
   handleActiveChange(image) {
     this.setState({
-      activeImage: image
+      activeImage: image,
+      fullSize: false
     });
   }
 
   render() {
-    const { isOpen, activeImage } = this.state;
+    const { isOpen, activeImage, fullSize } = this.state;
     const { images } = this.props;
 
     return (
@@ -75,8 +86,16 @@ class ImageModal extends React.Component {
       >
         {isOpen ? (
           <React.Fragment>
-            <div className={"image-large"}>
-              {activeImage && <Image className="card" src={activeImage.src} />}
+            <div
+              className={classnames("image-large", fullSize ? "full-size" : "")}
+            >
+              {activeImage && (
+                <Image
+                  className="card"
+                  src={activeImage.src}
+                  onClick={e => this.toggleFullSize(e)}
+                />
+              )}
             </div>
             <div className={"thumbnail-container"}>
               <ImageThumbnails
@@ -84,6 +103,9 @@ class ImageModal extends React.Component {
                 activeImage={activeImage}
                 onActiveChange={image => this.handleActiveChange(image)}
               />
+            </div>
+            <div className={"modal-close"} onClick={() => this.onClick()}>
+              <Close />
             </div>
           </React.Fragment>
         ) : null}

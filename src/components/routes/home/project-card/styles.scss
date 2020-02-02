@@ -40,7 +40,10 @@
             .phone-frame {
                 height: 100%;
                 position: absolute;
-                opacity: 0.85;
+
+                &.phone-visible {
+                    opacity: 0.85;
+                }
 
                 &.left {
                     transform: rotate(-25deg) scale(1.2) translate(0%, 0%);
