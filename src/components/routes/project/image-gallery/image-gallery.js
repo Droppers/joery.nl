@@ -83,7 +83,7 @@ class ImageGallery extends React.Component {
             />
           )}
         </div>
-        <div className="card thumbnails-card">
+        <div className="thumbnails-container">
           <ImageThumbnails
             images={images}
             activeImage={activeImage}
