@@ -41,6 +41,9 @@ class ImageModal extends React.Component {
         ? this.props.initialActiveImage
         : this.state.activeImage
     });
+
+    window.location.hash = "modal";
+    window.addEventListener("hashchange", this.hashChanged);
   }
 
   close() {
@@ -50,14 +53,22 @@ class ImageModal extends React.Component {
     this.setState({
       isOpen: false
     });
+
+    window.removeEventListener("hashchange", this.hashChanged);
   }
 
-  onClick() {
-    this.close();
+  hashChanged = () => {
+    if (window.location.hash !== "#modal") {
+      this.close();
 
-    if (this.props.onModalClose) {
-      this.props.onModalClose();
+      if (this.props.onModalClose) {
+        this.props.onModalClose();
+      }
     }
+  };
+
+  onClick() {
+    window.history.back();
   }
 
   toggleFullSize(e) {
