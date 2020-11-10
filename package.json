@@ -42,7 +42,10 @@
     ]
   },
   "reactSnap": {
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   },
   "devDependencies": {
     "@svgr/core": "^4.3.3",
