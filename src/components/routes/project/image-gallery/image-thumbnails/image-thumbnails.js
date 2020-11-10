@@ -18,34 +18,21 @@ class ImageThumbnails extends React.Component {
     }
   }
 
-  getThumbnail(src) {
-    const development =
-      !process.env.NODE_ENV || process.env.NODE_ENV === "development";
-
-    if (development) {
-      return src;
-    } else {
-      return src.substr(0, src.lastIndexOf(".")) + "-thumb.jpg";
-    }
-  }
-
   render() {
     const { images, activeImage } = this.props;
     return (
       <div className="image-thumbnails">
         {images.map((image, key) => (
           <Image
+            image={image.src}
+            size={256}
             key={key}
             className={classnames(
               "thumbnail card card-hover ",
               image === activeImage ? "active" : ""
             )}
-            style={{
-              height: 100,
-              width: 100 * (image.width / image.height) + "px"
-            }}
-            alt=""
-            src={this.getThumbnail(image.src)}
+            height={100}
+            width={100 * (image.width / image.height) + "px"}
             onClick={e => this.handleChange(e, image)}
           />
         ))}

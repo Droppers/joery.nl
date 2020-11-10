@@ -67,7 +67,8 @@ class ImageModal extends React.Component {
     }
   };
 
-  onClick() {
+  onClick(e) {
+    e.stopPropagation();
     window.history.back();
   }
 
@@ -93,7 +94,7 @@ class ImageModal extends React.Component {
     return (
       <div
         className={classnames("image-modal", isOpen ? "modal-visible" : "")}
-        onClick={() => this.onClick()}
+        onClick={e => this.onClick(e)}
       >
         {isOpen ? (
           <React.Fragment>
@@ -103,7 +104,7 @@ class ImageModal extends React.Component {
               {activeImage && (
                 <Image
                   className="card"
-                  src={activeImage.src}
+                  image={activeImage.src}
                   onClick={e => this.toggleFullSize(e)}
                 />
               )}
@@ -115,7 +116,7 @@ class ImageModal extends React.Component {
                 onActiveChange={image => this.handleActiveChange(image)}
               />
             </div>
-            <div className={"modal-close"} onClick={() => this.onClick()}>
+            <div className={"modal-close"} onClick={e => this.onClick(e)}>
               <Close />
             </div>
           </React.Fragment>

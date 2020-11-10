@@ -9,7 +9,7 @@ class HomeRoute extends React.Component {
     super(props);
 
     this.state = {
-      projects: allProjects
+      projects: allProjects,
     };
   }
 
@@ -17,7 +17,7 @@ class HomeRoute extends React.Component {
     const { projects } = this.state;
 
     return (
-      <div id="home">
+      <div id="page-root">
         <MetaTags>
           <title>Joery Droppers</title>
           <meta name="description" content="Ik ben Joery Droppers!" />
@@ -32,7 +32,7 @@ class HomeRoute extends React.Component {
 
             <div className="row d-flex justify-content-center">
               {projects.map((project, key) => (
-                <div className="col-md-6 col-lg-4" key={key}>
+                <div className="col-md-8 col-lg-6" key={key}>
                   <ProjectCard project={project} />
                 </div>
               ))}

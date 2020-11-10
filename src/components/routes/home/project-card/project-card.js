@@ -10,48 +10,29 @@ class ProjectCard extends React.Component {
     return (
       <div className="card project-card">
         {project.type === "app" && (
-          <div
-            className="project-cover app"
-            style={{
-              background:
-                "linear-gradient(135deg, " +
-                project.cover.gradient_start +
-                ", " +
-                project.cover.gradient_end +
-                ")"
-            }}
-          >
+          <div className="project-cover app">
             <PhoneFrame
               className="left"
               src={
-                "../static/images/projects/" + project.cover.image_left + ".jpg"
+                "./static/images/projects/" + project.cover.image_left + ".png"
               }
               alt="Left preview"
             />
             <PhoneFrame
               className="right"
               src={
-                "../static/images/projects/" +
-                project.cover.image_right +
-                ".jpg"
+                "./static/images/projects/" + project.cover.image_right + ".png"
               }
               alt="Right preview"
             />
-            <div className="icon">
-              <Image
-                alt="App icoon"
-                src={"../static/images/projects/" + project.cover.icon + ".png"}
-                width="70"
-                height="70"
-              />
-            </div>
           </div>
         )}
         {project.type === "website" && (
           <div className="project-cover website">
             <Image
               alt="Voorbeeld"
-              src={"../static/images/projects/" + project.cover.image + ".jpg"}
+              image={"./static/images/projects/" + project.cover.image + ".png"}
+              size={512}
             />
           </div>
         )}

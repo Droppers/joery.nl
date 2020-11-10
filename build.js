@@ -1,9 +1,7 @@
 const { readdir, readFile, writeFile, mkdir } = require("fs").promises;
 const rimraf = require("rimraf");
-const { statSync, readdirSync, existsSync } = require("fs");
+const { statSync, readdirSync } = require("fs");
 const { join, basename, extname } = require("path");
-const imagemin = require("imagemin");
-const imageminWebp = require("imagemin-webp");
 const { default: svgr } = require("@svgr/core");
 const sharp = require("sharp");
 
@@ -27,17 +25,6 @@ const getFiles = async (path, extension) => {
     }
   }
   return files.map(name => path + "/" + name);
-};
-
-const generateWebp = async path => {
-  const directories = getDirsRecursive(path);
-  for (const directory of directories) {
-    const files = await imagemin([directory + "/*.{jpg,png}"], {
-      destination: directory,
-      plugins: [imageminWebp({ quality: 80 })]
-    });
-    console.log("Generated webp", directory, files.length);
-  }
 };
 
 const svgoConfig = [
@@ -179,19 +166,30 @@ const svgToJs = async (path, outputPath) => {
   }
 };
 
-const generateThumbs = async path => {
+const generateSizes = async path => {
+  const sizes = [128, 256, 512, 1024];
+
   const directories = getDirsRecursive(path);
   for (const directory of directories) {
-    const files = await getFiles(directory, "jpg");
+    const files = await getFiles(directory, "png");
 
     for (const file of files) {
-      const output = file.substr(0, file.lastIndexOf(".")) + "-thumb.jpg";
-      await sharp(file)
-        .resize({ height: 350 })
-        .jpeg()
-        .toFile(output);
+      for (const size of sizes) {
+        const fileName = file.substr(0, file.lastIndexOf(".")) + "-" + size;
+        const resizer = sharp(file).resize({
+          height: size,
+          width: size,
+          fit: sharp.fit.inside,
+          withoutEnlargement: true
+        });
 
-      console.log("Generated thumbnail", output);
+        await resizer.png().toFile(fileName + ".png");
+        await resizer
+          .jpeg({ quality: 80, progressive: true })
+          .toFile(fileName + ".jpg");
+
+        console.log(`Generated size: ${size}`, fileName);
+      }
     }
   }
 };
@@ -203,10 +201,7 @@ const generateThumbs = async path => {
     const vectorPath = "src/vector";
     await svgToJs(staticPath, vectorPath);
   } else if (type === "post") {
-    const thumbPath = "build/static/images/projects";
-    await generateThumbs(thumbPath);
-
     const imagePath = "build/static/images";
-    await generateWebp(imagePath);
+    await generateSizes(imagePath);
   }
 })();

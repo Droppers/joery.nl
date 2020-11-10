@@ -31,7 +31,7 @@ class TimelineItem extends React.Component {
                   fill: "none",
                   strokeWidth: 3,
                   strokeLinecap: "butt",
-                  strokeLinejoin: "miter"
+                  strokeLinejoin: "miter",
                 }}
                 className="stroke"
                 d="m 1.5,0 c 0,11.19621 23,15.29388 23,26"

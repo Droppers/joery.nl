@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../../../../image/image";
 import classnames from "classnames";
-import { isWebkit } from "../../../../../utils/browser";
+import { isSnap } from "../../../../../utils/browser";
 
 class PhoneFrame extends React.Component {
   constructor(props) {
@@ -13,58 +13,47 @@ class PhoneFrame extends React.Component {
     this.state = {
       height: 0,
       width: 0,
-      isLoading: true
+      isLoading: true,
     };
   }
 
   componentDidMount() {
-    if (!isWebkit()) {
-      window.addEventListener("resize", this.onResize);
-    }
+    window.addEventListener("resize", this.onResize);
   }
 
   componentWillUnmount() {
-    if (!isWebkit()) {
-      window.removeEventListener("resize", this.onResize);
-    }
+    window.removeEventListener("resize", this.onResize);
   }
 
   onResize = () => {
-    this.updateImageSize();
+    // this.updateImageSize();
   };
 
-  onLoad = e => {
-    if (!isWebkit()) {
-      this.image = e.target;
-      this.updateImageSize();
-    } else {
-      this.setState({
-        isLoading: false
-      });
-    }
+  onLoad = (e) => {
+    this.image = e.target;
+    // setTimeout(() => this.updateImageSize(), 1);
   };
 
   updateImageSize() {
     if (!this.image) return;
 
-    const computedStyle = getComputedStyle(this.phoneRef.current);
-    const height = parseInt(computedStyle.getPropertyValue("height"), 10);
+    const phoneHeight = this.phoneRef.current.clientHeight;
     this.setState({
-      width: (this.image.naturalWidth / this.image.naturalHeight) * height,
-      height: height,
-      isLoading: false
+      width: (this.image.naturalWidth / this.image.naturalHeight) * phoneHeight,
+      height: phoneHeight,
+      isLoading: false,
     });
   }
 
   render() {
-    const { src, className } = this.props;
+    const { src, alt, className } = this.props;
     const { width, height, isLoading } = this.state;
 
     let imageProps = {};
     if (width && height) {
       imageProps = {
         width: width,
-        height: height
+        height: height,
       };
     }
 
@@ -72,14 +61,15 @@ class PhoneFrame extends React.Component {
       <div
         className={classnames(
           "phone-frame",
-          className,
-          isLoading ? "phone-invisible" : "phone-visible"
+          className
+          // isLoading || isSnap() ? "phone-invisible" : "phone-visible"
         )}
         ref={this.phoneRef}
       >
         <Image
-          alt="todo"
-          src={src}
+          alt={alt}
+          image={src}
+          size={512}
           ref={this.imageRef}
           onLoad={this.onLoad}
           {...imageProps}

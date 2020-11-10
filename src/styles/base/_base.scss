@@ -37,13 +37,17 @@ h3.title {
     height: 4px;
     margin-bottom: 6px;
   }
+
+  @media print {
+    font-size: 22px;
+  }
 }
 
 h2.title:after,
 h3.title:after,
 .card-title:after {
   content: "";
-  margin-left: 3px;
+  margin-left: 1px;
   border-radius: 50%;
   vertical-align: bottom;
   display: inline-block;
@@ -79,6 +83,10 @@ h3.title:after,
   .dont-print {
     display: block;
   }
+
+  .resume-text {
+    display: none;
+  }
 }
 
 @media print {
@@ -88,5 +96,14 @@ h3.title:after,
 
   .dont-print {
     display: none !important;
+  }
+
+  .resume-text {
+    display: block;
+    font-size: 14px;
+  }
+
+  h3.title+.resume-text {
+    margin-top: 10px;
   }
 }

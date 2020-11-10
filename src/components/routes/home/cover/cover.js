@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import SocialIcons from "../../../social-icons/social-icons";
 
 class Cover extends React.Component {
   render() {
     return (
-      <div className="container cover">
+      <section className="container cover">
         <div className="row">
           <div className="col-lg-6 col-md-6 col-md-12">
             <h1>Ik ben Joery Droppers</h1>
@@ -18,7 +18,7 @@ class Cover extends React.Component {
             <SocialIcons />
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

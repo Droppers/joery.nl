@@ -79,7 +79,7 @@ class ImageGallery extends React.Component {
               className={"image card " + orientation}
               alt=""
               onClick={() => this.openModal()}
-              src={activeImage.src}
+              image={activeImage.src}
             />
           )}
         </div>

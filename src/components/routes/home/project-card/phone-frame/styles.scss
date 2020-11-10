@@ -4,17 +4,18 @@
     border-top-width: 6px;
     border-bottom-width: 8px;
     border-radius: 8px;
-    transition: opacity 400ms;
+    transition: opacity 300ms;
+    display: flex;
 
     &.phone-invisible {
         visibility: hidden;
         opacity: 0;
     }
 
-    &.phone-visible {
-        visibility: visible;
-        opacity: 1;
-    }
+    // &.phone-visible {
+    //     visibility: visible;
+    //     opacity: 1;
+    // }
 
     img {
         height: 100%;
