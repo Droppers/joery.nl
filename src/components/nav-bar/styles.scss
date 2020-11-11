@@ -79,7 +79,6 @@
     @media screen and (max-width: 768px) {
         position: relative;
         box-shadow: none;
-        // border-bottom: 1px solid darken(var(--card-bg), 6%);
         border-bottom: 1px solid var(--card-bg); // TODO: find an alternative
 
         .container {

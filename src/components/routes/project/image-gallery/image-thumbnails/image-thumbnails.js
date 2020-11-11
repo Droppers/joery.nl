@@ -33,7 +33,7 @@ class ImageThumbnails extends React.Component {
             )}
             height={100}
             width={100 * (image.width / image.height) + "px"}
-            onClick={e => this.handleChange(e, image)}
+            onClick={(e) => this.handleChange(e, image)}
           />
         ))}
       </div>
@@ -44,7 +44,7 @@ class ImageThumbnails extends React.Component {
 ImageThumbnails.propTypes = {
   images: PropTypes.arrayOf(PropTypes.object),
   activeImage: PropTypes.object,
-  onActiveChange: PropTypes.func
+  onActiveChange: PropTypes.func,
 };
 
 export default ImageThumbnails;

@@ -11,7 +11,7 @@ class ImageGallery extends React.Component {
     this.state = {
       activeImage: null,
       orientation: "portrait",
-      modalOpen: false
+      modalOpen: false,
     };
   }
 
@@ -22,7 +22,7 @@ class ImageGallery extends React.Component {
     if (!activeImage && images.length > 0) {
       this.handleChange(images[0]);
       this.setState({
-        activeImage: images[0]
+        activeImage: images[0],
       });
     }
   }
@@ -31,31 +31,20 @@ class ImageGallery extends React.Component {
     const orientation = image.height > image.width ? "portrait" : "landscape";
     this.setState({
       activeImage: image,
-      orientation: orientation
+      orientation: orientation,
     });
-  }
-
-  getThumbnail(src) {
-    const development =
-      !process.env.NODE_ENV || process.env.NODE_ENV === "development";
-
-    if (development) {
-      return src;
-    } else {
-      return src.substr(0, src.lastIndexOf(".")) + "-thumb.jpg";
-    }
   }
 
   openModal() {
     this.setState({
-      modalOpen: true
+      modalOpen: true,
     });
   }
 
   closeModal() {
     if (this.state.modalOpen) {
       this.setState({
-        modalOpen: false
+        modalOpen: false,
       });
     }
   }
@@ -79,6 +68,7 @@ class ImageGallery extends React.Component {
               className={"image card " + orientation}
               alt=""
               onClick={() => this.openModal()}
+              size={1024}
               image={activeImage.src}
             />
           )}
@@ -87,7 +77,7 @@ class ImageGallery extends React.Component {
           <ImageThumbnails
             images={images}
             activeImage={activeImage}
-            onActiveChange={image => this.handleChange(image)}
+            onActiveChange={(image) => this.handleChange(image)}
           />
         </div>
       </div>
@@ -96,7 +86,7 @@ class ImageGallery extends React.Component {
 }
 
 ImageGallery.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.object)
+  images: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default ImageGallery;

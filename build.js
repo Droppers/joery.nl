@@ -5,15 +5,15 @@ const { join, basename, extname } = require("path");
 const { default: svgr } = require("@svgr/core");
 const sharp = require("sharp");
 
-const flatten = lists => lists.reduce((a, b) => a.concat(b), []);
+const flatten = (lists) => lists.reduce((a, b) => a.concat(b), []);
 
-const getDirs = path => {
+const getDirs = (path) => {
   return readdirSync(path)
-    .map(file => join(path, file).replace(/\\/g, "/"))
-    .filter(path => statSync(path).isDirectory());
+    .map((file) => join(path, file).replace(/\\/g, "/"))
+    .filter((path) => statSync(path).isDirectory());
 };
 
-const getDirsRecursive = path => {
+const getDirsRecursive = (path) => {
   return [path, ...flatten(getDirs(path).map(getDirsRecursive))];
 };
 
@@ -24,109 +24,109 @@ const getFiles = async (path, extension) => {
       files.push(file);
     }
   }
-  return files.map(name => path + "/" + name);
+  return files.map((name) => path + "/" + name);
 };
 
 const svgoConfig = [
   {
-    cleanupAttrs: true
+    cleanupAttrs: true,
   },
   {
-    removeDoctype: true
+    removeDoctype: true,
   },
   {
-    removeXMLProcInst: true
+    removeXMLProcInst: true,
   },
   {
-    removeComments: true
+    removeComments: true,
   },
   {
-    removeMetadata: true
+    removeMetadata: true,
   },
   {
-    removeTitle: true
+    removeTitle: true,
   },
   {
-    removeDesc: true
+    removeDesc: true,
   },
   {
-    removeUselessDefs: true
+    removeUselessDefs: true,
   },
   {
-    removeEditorsNSData: true
+    removeEditorsNSData: true,
   },
   {
-    removeEmptyAttrs: true
+    removeEmptyAttrs: true,
   },
   {
-    removeHiddenElems: true
+    removeHiddenElems: true,
   },
   {
-    removeEmptyText: true
+    removeEmptyText: true,
   },
   {
-    removeEmptyContainers: true
+    removeEmptyContainers: true,
   },
   {
-    removeViewBox: false
+    removeViewBox: false,
   },
   {
-    cleanupEnableBackground: true
+    cleanupEnableBackground: true,
   },
   {
-    convertStyleToAttrs: true
+    convertStyleToAttrs: true,
   },
   {
-    convertColors: true
+    convertColors: true,
   },
   {
-    convertPathData: true
+    convertPathData: true,
   },
   {
-    convertTransform: true
+    convertTransform: true,
   },
   {
-    removeUnknownsAndDefaults: true
+    removeUnknownsAndDefaults: true,
   },
   {
-    removeNonInheritableGroupAttrs: true
+    removeNonInheritableGroupAttrs: true,
   },
   {
-    removeUnusedNS: true
+    removeUnusedNS: true,
   },
   {
-    cleanupNumericValues: true
+    cleanupNumericValues: true,
   },
   {
-    moveElemsAttrsToGroup: true
+    moveElemsAttrsToGroup: true,
   },
   {
-    moveGroupAttrsToElems: true
+    moveGroupAttrsToElems: true,
   },
   {
-    collapseGroups: true
+    collapseGroups: true,
   },
   {
-    removeRasterImages: false
+    removeRasterImages: false,
   },
   {
-    mergePaths: false
+    mergePaths: false,
   },
   {
-    convertShapeToPath: true
+    convertShapeToPath: true,
   },
   {
-    sortAttrs: true
+    sortAttrs: true,
   },
   {
-    cleanupIDs: false
-  }
+    cleanupIDs: false,
+  },
 ];
 
-const toCamel = s => {
+const toCamel = (s) => {
   return s
     .split("-")
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join("");
 };
 
@@ -148,11 +148,11 @@ const svgToJs = async (path, outputPath) => {
           plugins: [
             "@svgr/plugin-svgo",
             "@svgr/plugin-jsx",
-            "@svgr/plugin-prettier"
+            "@svgr/plugin-prettier",
           ],
           svgoConfig: {
-            plugins: svgoConfig
-          }
+            plugins: svgoConfig,
+          },
         },
         { componentName: name }
       );
@@ -166,7 +166,7 @@ const svgToJs = async (path, outputPath) => {
   }
 };
 
-const generateSizes = async path => {
+const generateSizes = async (path) => {
   const sizes = [128, 256, 512, 1024];
 
   const directories = getDirsRecursive(path);
@@ -180,7 +180,7 @@ const generateSizes = async path => {
           height: size,
           width: size,
           fit: sharp.fit.inside,
-          withoutEnlargement: true
+          withoutEnlargement: true,
         });
 
         await resizer.png().toFile(fileName + ".png");

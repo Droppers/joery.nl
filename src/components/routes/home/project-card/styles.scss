@@ -1,23 +1,44 @@
 .project-card {
     overflow: hidden;
-    display: flex;
 
     .project-cover {
         position: relative;
-        width: 200px;
+        width: 100%;
         overflow: hidden;
+        padding-bottom: calc(9 / 16 * 100%);
 
         &.website {
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                position: absolute;
             }
         }
 
         &.app {
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            .icon {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 5;
+            }
+            
             .phone-frame {
-                height: 66%;
+                height: 100%;
                 position: absolute;
                 bottom: 0;
 
@@ -26,12 +47,12 @@
                 }
 
                 &.left {
-                    // transform: translate(55%, 20%);
+                    transform: translate(55%, 20%);
                 }
 
                 &.right {
                     right: 0;
-                    // transform: translate(-55%, 10%);
+                    transform: translate(-55%, 10%);
                 }
             }
         }
