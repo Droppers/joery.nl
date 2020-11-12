@@ -10,6 +10,15 @@ section.content {
   padding-bottom: 30px;
 }
 
+
+h1.title {
+  &:after {
+    width: 5px;
+    height: 5px;
+    margin-bottom: 8px;
+  }
+}
+
 h2.title {
   width: 100%;
   font-weight: normal;
@@ -43,6 +52,7 @@ h3.title {
   }
 }
 
+h1.title:after,
 h2.title:after,
 h3.title:after,
 .card-title:after {

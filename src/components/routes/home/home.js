@@ -28,9 +28,9 @@ class HomeRoute extends React.Component {
         <Cover />
         <section className="content">
           <div className="container">
-            <h2 className="title align-middle">Projecten</h2>
+            <h2 className="title align-middle">Mijn projecten</h2>
 
-            <div className="row d-flex justify-content-center">
+            <div className="row d-flex">
               {projects.map((project, key) => (
                 <div className="col-md-8 col-lg-4" key={key}>
                   <ProjectCard project={project} />

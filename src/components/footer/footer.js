@@ -11,7 +11,9 @@ class Footer extends React.Component {
           className="logo"
           src="/static/images/logo.svg"
         />
-        <span className="copyright">Copyright 2019 - Joery Droppers</span>
+        <span className="copyright">
+          Copyright {new Date().getFullYear()} - Joery Droppers
+        </span>
         <SocialIcons />
       </footer>
     );

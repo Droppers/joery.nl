@@ -1,16 +1,28 @@
 export const allProjects = [
   {
+    name: "AnimatedBottomBar",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    descriptionLong:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik typ weer wat onzin, zodat ik kan zien of dit eigenlijk wel werkt. Geen idee.",
+    cover: {
+      type: "image",
+      image: "animatedbottombar",
+      fit: "contain",
+      background: "#a66afb",
+    },
+    github: "Droppers/AnimatedBottomBar",
+  },
+  {
     slug: "bedtime",
-    type: "app",
     name: "Bedtime",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     descriptionLong:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik typ weer wat onzin, zodat ik kan zien of dit eigenlijk wel werkt. Geen idee.",
     cover: {
+      type: "app",
       image_left: "bedtime-left",
       image_right: "bedtime-right",
-      gradient_start: "#72a6fd",
-      gradient_end: "#bed7ff",
+      background: "#659fff",
       icon: "bedtime-icon",
     },
     images: [
@@ -53,13 +65,14 @@ export const allProjects = [
   },
   {
     slug: "agar-yt",
-    type: "website",
     name: "Agar.yt",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     descriptionLong:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik typ weer wat onzin, zodat ik kan zien of dit eigenlijk wel werkt. Geen idee.",
     cover: {
+      type: "image",
       image: "agar-yt",
+      fit: "cover",
     },
     images: [
       {
@@ -86,16 +99,15 @@ export const allProjects = [
   },
   {
     slug: "runner",
-    type: "app",
     name: "Runner",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     descriptionLong:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik typ weer wat onzin, zodat ik kan zien of dit eigenlijk wel werkt. Geen idee.",
     cover: {
+      type: "app",
       image_left: "runner-left",
       image_right: "runner-right",
-      gradient_start: "rgb(132, 156, 94)",
-      gradient_end: "rgb(182, 238, 120)",
+      background: "#98c158",
       icon: "runner-icon",
     },
     images: [

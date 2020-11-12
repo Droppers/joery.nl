@@ -7,7 +7,7 @@
         overflow: hidden;
         padding-bottom: calc(9 / 16 * 100%);
 
-        &.website {
+        &.type-image {
             img {
                 width: 100%;
                 height: 100%;
@@ -16,35 +16,31 @@
             }
         }
 
-        &.app {
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                top: 0;
-                background: rgba(255, 255, 255, 0.2);
-            }
+        &.type-app {
+            // &:after {
+            //     content: "";
+            //     position: absolute;
+            //     left: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     top: 0;
+            //     background: rgba(255, 255, 255, 0.2);
+            // }
 
-            .icon {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 5;
-            }
+            // .icon {
+            //     position: absolute;
+            //     width: 100%;
+            //     height: 100%;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     z-index: 5;
+            // }
             
             .phone-frame {
                 height: 100%;
                 position: absolute;
                 bottom: 0;
-
-                &.phone-visible {
-                    opacity: 0.85;
-                }
 
                 &.left {
                     transform: translate(55%, 20%);

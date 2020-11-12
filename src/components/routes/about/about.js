@@ -60,7 +60,7 @@ class AboutRoute extends React.Component {
               title: "Software Ontwikkelaar",
               subtitle: "Bijbaan",
               from: "jul. 2019",
-              to: "heden",
+              to: "mei 2020",
             },
             {
               title: "Software Ontwikkelaar",
@@ -85,6 +85,15 @@ class AboutRoute extends React.Component {
           logo: Saxion,
           from: "2018",
           to: "heden",
+          children: [
+            {
+              title: "Bronkhorst High-Tech",
+              subtitle: "Stage – Software Ontwikkelaar",
+              logo: Bronkhorst,
+              from: "aug. 2020",
+              to: "heden",
+            },
+          ],
         },
         {
           title: "Graafschap College",
