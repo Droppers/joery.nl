@@ -1,0 +1,11 @@
+{
+    "platformErrorOverrides": [
+        {
+            "errorType": "NotFound",
+            "serve": "/404.html"
+        }
+    ],
+    "defaultHeaders": {
+        "Cache-Control": "public, max-age=15552000"
+    }
+}
