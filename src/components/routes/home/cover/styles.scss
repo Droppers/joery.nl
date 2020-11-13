@@ -1,50 +1,50 @@
 .cover {
-    max-width: 900px;
-    padding: 100px 30px;
+  max-width: 900px;
+  padding: 100px 30px;
+
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 38px;
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    text-align: left;
+    font-weight: 400;
+    margin: 0;
+    font-size: 20px;
+    color: var(--text-secondary);
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      height: 16px;
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--card-bg); // TODO: find an alternative
 
     h1 {
-        margin: 0;
-        font-weight: 400;
-        font-size: 38px;
-        margin-bottom: 6px;
+      font-size: 30px;
     }
 
     h2 {
-        text-align: left;
-        font-weight: 400;
-        margin: 0;
-        font-size: 20px;
-        color: var(--text-secondary);
+      font-size: 18px;
     }
-
-    p {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .logo {
-            height: 16px;
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        padding: 30px 30px;
-        margin-bottom: 30px;
-        background-color: var(--card-bg);
-        border-bottom: 1px solid var(--card-bg); // TODO: find an alternative
-
-        h1 {
-            font-size: 30px;
-        }
-
-        h2 {
-            font-size: 18px;
-        }
-    }
+  }
 }

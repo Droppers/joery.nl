@@ -1,23 +1,23 @@
 .social-icons {
-    margin-top: 20px;
+  margin-top: 20px;
 
-    a.icon {
-        margin-left: 10px;
+  a.icon {
+    margin-left: 10px;
 
-        &:first-child {
-            margin-left: 0;
-        }
-
-        svg {
-            height: 28px;
-            width: 28px;
-            opacity: 0.8;
-            transition: opacity 250ms;
-            filter: var(--icon-filter);
-
-            &:hover {
-                opacity: 1;
-            }
-        }
+    &:first-child {
+      margin-left: 0;
     }
+
+    svg {
+      height: 28px;
+      width: 28px;
+      opacity: 0.8;
+      transition: opacity 250ms;
+      filter: var(--icon-filter);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }

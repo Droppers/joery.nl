@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Image from "../../../image/image";
 import PhoneFrame from "./phone-frame/phone-frame";
+import Github from "vector/icons/github";
 
 class ProjectCard extends React.Component {
   render() {
@@ -32,16 +33,6 @@ class ProjectCard extends React.Component {
               alt="Right preview"
               size={256}
             />
-            {/* <div className="icon">
-              <Image
-                alt="App icoon"
-                image={"/static/images/projects/" + project.cover.icon + ".png"}
-                extension="png"
-                width="70"
-                height="70"
-                size={128}
-              />
-            </div> */}
           </div>
         )}
         {project.cover.type === "image" && (
@@ -51,12 +42,18 @@ class ProjectCard extends React.Component {
               background: project.cover.background,
             }}
           >
-            <Image
-              alt="Voorbeeld"
-              style={{ objectFit: project.cover.fit }}
-              image={"./static/images/projects/" + project.cover.image + ".png"}
-              size={512}
-            />
+            {typeof project.cover.image === "string" ? (
+              <Image
+                alt="Voorbeeld"
+                style={{ objectFit: project.cover.fit }}
+                image={
+                  "./static/images/projects/" + project.cover.image + ".png"
+                }
+                size={512}
+              />
+            ) : (
+              <project.cover.image />
+            )}
           </div>
         )}
         <div className="content">
@@ -75,7 +72,7 @@ class ProjectCard extends React.Component {
               href={"https://github.com/" + project.github}
               className="btn btn-primary btn-outline read-more"
             >
-              Bekijk op GitHub
+              <Github /> GitHub
             </a>
           )}
         </div>

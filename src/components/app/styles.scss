@@ -1,47 +1,47 @@
 #app {
-    width: 100%;
-    min-height: 100vh;
-    padding-top: $nav-bar-height;
-    position: relative;
-    color: var(--text);
-    background-color: var(--bg);
-    -webkit-print-color-adjust: exact;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: $nav-bar-height;
+  position: relative;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-print-color-adjust: exact;
 
-    .logo {
-        #prefix__logo-bottom {
-            fill: var(--logo-secondary);
-        }
-
-        #prefix__logo-top {
-            fill: var(--logo-primary);
-        }
+  .logo {
+    #prefix__logo-bottom {
+      fill: var(--logo-secondary);
     }
 
-    @media print {
-        background-color: var(--card-bg);
+    #prefix__logo-top {
+      fill: var(--logo-primary);
     }
+  }
+
+  @media print {
+    background-color: var(--card-bg);
+  }
+
+  .corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &.corner-top {
+      width: 32%;
+      opacity: var(--corner-top-opacity);
+    }
+
+    &.corner-bottom {
+      width: 43%;
+      opacity: var(--corner-bottom-opacity);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
 
     .corner {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        &.corner-top {
-            width: 32%;
-            opacity: var(--corner-top-opacity);
-        }
-
-        &.corner-bottom {
-            width: 43%;
-            opacity: var(--corner-bottom-opacity);
-        }
+      display: none;
     }
-
-    @media screen and (max-width: 768px) {
-        padding-top: 0;
-
-        .corner {
-            display: none;
-        }
-    }
+  }
 }

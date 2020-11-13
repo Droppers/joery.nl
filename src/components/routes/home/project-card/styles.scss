@@ -1,77 +1,62 @@
 .project-card {
+  overflow: hidden;
+
+  .project-cover {
+    position: relative;
+    width: 100%;
     overflow: hidden;
+    padding-bottom: calc(9 / 16 * 100%);
 
-    .project-cover {
-        position: relative;
+    &.type-image {
+      img,
+      svg {
         width: 100%;
-        overflow: hidden;
-        padding-bottom: calc(9 / 16 * 100%);
-
-        &.type-image {
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-            }
-        }
-
-        &.type-app {
-            // &:after {
-            //     content: "";
-            //     position: absolute;
-            //     left: 0;
-            //     right: 0;
-            //     bottom: 0;
-            //     top: 0;
-            //     background: rgba(255, 255, 255, 0.2);
-            // }
-
-            // .icon {
-            //     position: absolute;
-            //     width: 100%;
-            //     height: 100%;
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     z-index: 5;
-            // }
-            
-            .phone-frame {
-                height: 100%;
-                position: absolute;
-                bottom: 0;
-
-                &.left {
-                    transform: translate(55%, 20%);
-                }
-
-                &.right {
-                    right: 0;
-                    transform: translate(-55%, 10%);
-                }
-            }
-        }
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+      }
     }
 
-    .content {
-        padding: 25px;
-        text-align: center;
+    &.type-app {
+      .phone-frame {
+        height: 100%;
+        position: absolute;
+        bottom: 0;
 
-        .title {
-            font-size: 24px;
-            display: block;
-            margin-bottom: 15px;
+        &.left {
+          transform: translate(55%, 20%);
         }
 
-        .description {
-            font-size: 16px;
-            display: block;
-            color: var(--text-secondary);
+        &.right {
+          right: 0;
+          transform: translate(-55%, 10%);
         }
+      }
+    }
+  }
+
+  .content {
+    padding: 25px;
+    text-align: center;
+
+    .title {
+      font-size: 24px;
+      display: block;
+      margin-bottom: 15px;
     }
 
-    .read-more {
-        margin-top: 25px;
+    .description {
+      font-size: 16px;
+      display: block;
+      color: var(--text-secondary);
     }
+  }
+
+  .read-more {
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 }

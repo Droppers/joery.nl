@@ -1,3 +1,5 @@
+import Animatedbottombar from "vector/projects/animatedbottombar";
+
 export const allProjects = [
   {
     name: "AnimatedBottomBar",
@@ -6,7 +8,7 @@ export const allProjects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik typ weer wat onzin, zodat ik kan zien of dit eigenlijk wel werkt. Geen idee.",
     cover: {
       type: "image",
-      image: "animatedbottombar",
+      image: Animatedbottombar,
       fit: "contain",
       background: "#a66afb",
     },

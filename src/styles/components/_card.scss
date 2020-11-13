@@ -1,55 +1,55 @@
 .card {
-    border-radius: 8px;
+  border-radius: 8px;
+  transition: box-shadow 300ms;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+  background-color: var(--card-bg);
+
+  @media print {
+    background-color: var(--bg);
+  }
+
+  &.card-hover {
     transition: box-shadow 300ms;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.12);
-    margin-bottom: 30px;
-    background-color: var(--card-bg);
 
-    @media print {
-        background-color: var(--bg);
+    &:hover {
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.12);
     }
+  }
 
-    &.card-hover {
-        transition: box-shadow 300ms;
+  .card-title {
+    font-size: 20px;
+    padding: 30px;
+    padding-bottom: 0px;
 
-        &:hover {
-            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.12);
-        }
+    &:after {
+      width: 3px;
+      height: 3px;
+      margin-bottom: 5px;
     }
+  }
 
+  .card-content {
+    padding: 30px;
+  }
+
+  @media (max-width: 768px) {
     .card-title {
-        font-size: 20px;
-        padding: 30px;
-        padding-bottom: 0px;
-
-        &:after {
-            width: 3px;
-            height: 3px;
-            margin-bottom: 5px;
-        }
+      padding: 20px;
+      padding-bottom: 0px;
     }
 
     .card-content {
-        padding: 30px;
+      padding: 20px;
     }
+  }
 
-    @media (max-width: 768px) {
-        .card-title {
-            padding: 20px;
-            padding-bottom: 0px;
-        }
+  @media print {
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
 
-        .card-content {
-            padding: 20px;
-        }
+    .card-content {
+      font-size: 15px;
     }
-
-    @media print {
-        box-shadow: none;
-        border: 1px solid rgba(0, 0, 0, 0.12);
-
-        .card-content {
-            font-size: 15px;
-        }
-    }
+  }
 }

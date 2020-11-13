@@ -1,32 +1,32 @@
 .image-gallery {
-    .image-container {
-        display: flex;
+  .image-container {
+    display: flex;
+    max-height: 400px;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .image {
+      margin-bottom: 0;
+      cursor: pointer;
+
+      &.portrait {
         max-height: 400px;
-        justify-content: center;
-        margin-bottom: 30px;
+      }
 
-        .image {
-            margin-bottom: 0;
-            cursor: pointer;
-
-            &.portrait {
-                max-height: 400px;
-            }
-
-            &.landscape {
-                max-width: 100%;
-                flex: 1;
-            }
-        }
-
-        img {
-            display: block;
-        }
+      &.landscape {
+        max-width: 100%;
+        flex: 1;
+      }
     }
 
-    .thumbnails-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
+    img {
+      display: block;
     }
+  }
+
+  .thumbnails-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }

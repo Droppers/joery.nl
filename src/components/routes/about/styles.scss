@@ -1,52 +1,52 @@
 #about {
-    .print-resume {
-        width: 100%;
-        margin-bottom: 30px;
-        background-color: var(--card-bg);
-    }
+  .print-resume {
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: var(--card-bg);
+  }
 
-    .my-summary {
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
+  .my-summary {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 
-    .personal-details {
-        margin-top: 15px;
-        margin-bottom: 30px;
-    }
+  .personal-details {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
 
-    .icon-list {
-        .icon-list-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-            font-size: 15px;
+  .icon-list {
+    .icon-list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 15px;
 
-            >.icon {
-                height: 20px;
-                width: 20px;
-                margin-right: 20px;
+      > .icon {
+        height: 20px;
+        width: 20px;
+        margin-right: 20px;
 
-                >path {
-                    fill: var(--text-secondary);
-                }
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
+        > path {
+          fill: var(--text-secondary);
         }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media print {
+    .about-left {
+      flex: 0 0 58.3333333333%;
+      max-width: 58.3333333333%;
     }
 
-    @media print {
-        .about-left {
-            flex: 0 0 58.3333333333%;
-            max-width: 58.3333333333%;
-        }
-
-        .about-right {
-            flex: 0 0 41.6666666667%;
-            max-width: 41.6666666667%;
-        }
+    .about-right {
+      flex: 0 0 41.6666666667%;
+      max-width: 41.6666666667%;
     }
+  }
 }
