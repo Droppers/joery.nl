@@ -9,7 +9,7 @@ class ProjectCard extends React.Component {
     const { project } = this.props;
 
     return (
-      <div className="card project-card">
+      <div className="project-card">
         {project.cover.type === "app" && (
           <div
             className="project-cover type-app"
@@ -43,21 +43,22 @@ class ProjectCard extends React.Component {
             }}
           >
             {typeof project.cover.image === "string" ? (
-              <Image
-                alt="Voorbeeld"
-                style={{ objectFit: project.cover.fit }}
-                image={
-                  "./static/images/projects/" + project.cover.image + ".png"
-                }
-                size={512}
-              />
+              <div class="image-wrapper">
+                <Image
+                  alt="Voorbeeld"
+                  image={
+                    "./static/images/projects/" + project.cover.image + ".png"
+                  }
+                  size={512}
+                />
+              </div>
             ) : (
               <project.cover.image />
             )}
           </div>
         )}
         <div className="content">
-          <span className="title">{project.name}</span>
+          <h3 className="title">{project.name}</h3>
           <span className="description">{project.description}</span>
           {project.slug && (
             <Link

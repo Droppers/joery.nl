@@ -73,6 +73,7 @@ export const allProjects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik typ weer wat onzin, zodat ik kan zien of dit eigenlijk wel werkt. Geen idee.",
     cover: {
       type: "image",
+      background: "#4f848d",
       image: "agar-yt",
       fit: "cover",
     },
