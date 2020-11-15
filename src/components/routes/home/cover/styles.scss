@@ -1,20 +1,45 @@
 .cover {
-  max-width: 900px;
-  padding: 100px 30px;
+  padding: 120px 30px;
+  position: relative;
+  color: #fff;
+
+  @media (min-width: 992px) {
+    max-width: 900px;
+  }
+
+  .bubble {
+    position: absolute;
+    top: -28%;
+    z-index: 0;
+    right: 0;
+    left: -15%;
+    width: 125%;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  * {
+    position: relative;
+  }
 
   h1 {
     margin: 0;
     font-weight: 400;
-    font-size: 38px;
-    margin-bottom: 6px;
+    font-size: 32px;
+
+    &:after {
+      background-color: #fff;
+    }
   }
 
   h2 {
     text-align: left;
     font-weight: 400;
     margin: 0;
-    font-size: 20px;
-    color: var(--text-secondary);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
   }
 
   p {
@@ -31,6 +56,11 @@
       height: 16px;
       display: none;
     }
+  }
+
+  .social-icons svg {
+    filter: none !important;
+    fill: #fff;
   }
 
   @media screen and (max-width: 768px) {

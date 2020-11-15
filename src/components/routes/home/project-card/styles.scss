@@ -35,14 +35,6 @@
           border-radius: 5px;
         }
       }
-
-      //   img,
-      //   svg {
-      //     width: 100%;
-      //     height: 100%;
-      //     object-fit: cover;
-      //     position: absolute;
-      //   }
     }
 
     &.type-app {
@@ -64,12 +56,12 @@
   }
 
   .content {
-    margin-top: 25px;
+    margin-top: 15px;
 
     .title {
       font-size: 24px;
       display: block;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
 
       &:after {
         margin-left: 3px;
@@ -91,6 +83,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }

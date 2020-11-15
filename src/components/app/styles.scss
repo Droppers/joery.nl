@@ -21,6 +21,17 @@
     background-color: var(--card-bg);
   }
 
+  .bubble-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32%;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
   .corner {
     position: absolute;
     top: 0;
@@ -29,6 +40,11 @@
     &.corner-top {
       width: 32%;
       opacity: var(--corner-top-opacity);
+    }
+
+    &.corner-top2 {
+      opacity: 1;
+      width: 32%;
     }
 
     &.corner-bottom {

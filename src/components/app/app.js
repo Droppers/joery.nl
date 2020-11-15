@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import NavBar from "../nav-bar/nav-bar";
 import Footer from "../footer/footer";
-import BackgroundBottom from "vector/background-bottom";
-import BackgroundTop from "vector/background-top";
+import BubbleCorner from "vector/bubble-corner";
 
 import HomeRoute from "../routes/home/home";
 import AboutRoute from "../routes/about/about";
@@ -16,15 +15,9 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div id="app" className="home">
-          <BackgroundBottom
-            className="corner corner-bottom dont-print"
-            src="/static/images/background-bottom.svg"
-            alt="Bottom"
-          />
-          <BackgroundTop
-            className="corner corner-top dont-print"
-            src="/static/images/background-top.svg"
-            alt="Top"
+          <BubbleCorner
+            className="bubble-corner"
+            src="static/vector/bubble-corner.svg"
           />
 
           <NavBar />

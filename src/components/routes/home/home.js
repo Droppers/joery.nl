@@ -32,7 +32,7 @@ class HomeRoute extends React.Component {
 
             <div className="row d-flex">
               {projects.map((project, key) => (
-                <div className="col-md-8 col-lg-4" key={key}>
+                <div className="col-md-6 col-lg-4" key={key}>
                   <ProjectCard project={project} />
                 </div>
               ))}
