@@ -18,8 +18,16 @@ const Logo = props => (
         gradientTransform="matrix(.71822 0 0 .71815 0 0)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset={0} stopColor="#4355e9" />
-        <stop offset={1} stopColor="#8c55ea" />
+        <stop
+          className="prefix__gradient-primary-stop"
+          offset={0}
+          stopColor="#4355e9"
+        />
+        <stop
+          className="prefix__gradient-primary-start"
+          offset={1}
+          stopColor="#8c55ea"
+        />
       </linearGradient>
     </defs>
     <rect

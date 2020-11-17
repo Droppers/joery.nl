@@ -12,8 +12,8 @@
  <defs>
   <linearGradient id="bubble-top" x1="-709.58" x2="-709.58" y1="-591.8" y2="-169.55" gradientTransform="matrix(.98735 0 0 .98735 982.18 588.86)" gradientUnits="userSpaceOnUse" xlink:href="#bubble"/>
   <linearGradient id="bubble">
-   <stop stop-color="#6346bd" offset="0"/>
-   <stop stop-color="#333b8c" offset="1"/>
+   <stop class="gradient-primary-start" stop-color="#6346bd" offset="0"/>
+   <stop class="gradient-primary-stop" stop-color="#333b8c" offset="1"/>
   </linearGradient>
   <linearGradient id="bubble-bottom" x1="-709.58" x2="-709.58" y1="-591.8" y2="-169.55" gradientTransform="matrix(.97225 -.17202 .17202 .97225 1048.4 467.96)" gradientUnits="userSpaceOnUse" xlink:href="#bubble"/>
  </defs>

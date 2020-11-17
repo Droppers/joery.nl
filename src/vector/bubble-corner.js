@@ -5,27 +5,43 @@ const BubbleCorner = props => (
     <defs>
       <linearGradient
         id="prefix__linearGradient936"
-        x1={-725.3}
+        x1={-788.56}
         x2={-709.58}
-        y1={-452.67}
+        y1={-436.53}
         y2={-169.55}
         gradientTransform="matrix(.92665 -.34084 .34084 .92665 1084.8 140.62)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset={0} stopColor="#6346bd" />
-        <stop offset={1} stopColor="#333b8c" />
+        <stop
+          className="prefix__gradient-primary-start"
+          offset={0}
+          stopColor="#6346bd"
+        />
+        <stop
+          className="prefix__gradient-primary-stop"
+          offset={1}
+          stopColor="#333b8c"
+        />
       </linearGradient>
       <linearGradient
         id="prefix__linearGradient1340"
-        x1={-667.14}
-        x2={-713.66}
-        y1={-406.33}
-        y2={-146.76}
+        x1={-787.02}
+        x2={-727.49}
+        y1={-398.21}
+        y2={-145.82}
         gradientTransform="matrix(.97186 -.17418 .17418 .97186 1041 271.3)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset={0} stopColor="#6346bd" />
-        <stop offset={1} stopColor="#333b8c" />
+        <stop
+          className="prefix__gradient-primary-start"
+          offset={0}
+          stopColor="#6346bd"
+        />
+        <stop
+          className="prefix__gradient-primary-stop"
+          offset={1}
+          stopColor="#333b8c"
+        />
       </linearGradient>
     </defs>
     <path

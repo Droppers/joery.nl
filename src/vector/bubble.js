@@ -18,8 +18,16 @@ const Bubble = props => (
         xlinkHref="#prefix__bubble"
       />
       <linearGradient id="prefix__bubble">
-        <stop offset={0} stopColor="#6346bd" />
-        <stop offset={1} stopColor="#333b8c" />
+        <stop
+          className="prefix__gradient-primary-start"
+          offset={0}
+          stopColor="#6346bd"
+        />
+        <stop
+          className="prefix__gradient-primary-stop"
+          offset={1}
+          stopColor="#333b8c"
+        />
       </linearGradient>
       <linearGradient
         id="prefix__bubble-bottom"

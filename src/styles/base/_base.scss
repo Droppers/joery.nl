@@ -64,6 +64,14 @@ h3.title:after,
   background-color: var(--primary);
 }
 
+.prefix__gradient-primary-start {
+  stop-color: var(--gradient-primary-start) !important;
+}
+
+.prefix__gradient-primary-stop {
+  stop-color: var(--gradient-primary-stop) !important;
+}
+
 .page-content {
   margin-top: 60px;
 

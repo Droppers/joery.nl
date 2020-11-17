@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg class="d-inline-block align-top" width="24" height="24" alt="Logo" version="1.1" viewBox="0 0 24.308 24.308" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
- <metadata>
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
  <defs>
   <linearGradient id="linearGradient918" x1="33.844" x2="-.0001181" y1="33.848" y2="-.00059844" gradientTransform="matrix(.71822 0 0 .71815 -3.1092e-5 -3.7049e-5)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#4355e9" offset="0"/>
-   <stop stop-color="#8c55ea" offset="1"/>
+   <stop class="gradient-primary-stop" stop-color="#4355e9" offset="0"/>
+   <stop class="gradient-primary-start" stop-color="#8c55ea" offset="1"/>
   </linearGradient>
  </defs>
  <rect x="-.00011034" y="-.00013145" width="24.308" height="24.308" rx="3.9463" ry="3.9459" fill="url(#linearGradient918)" stroke-width="1.9127"/>
