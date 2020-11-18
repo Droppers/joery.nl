@@ -77,8 +77,8 @@
   }
 
   @media screen and (max-width: 768px) {
+    box-shadow: none;
     position: relative;
-    border-bottom: 1px solid var(--card-bg); // TODO: find an alternative
 
     .container {
       flex-direction: column;
@@ -90,10 +90,16 @@
       }
 
       .nav {
-        height: 55px;
+        height: 64px;
         justify-content: space-between;
-        margin: 0 5px;
-        margin-top: 15px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        background: var(--card-bg);
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.16);
 
         .link {
           margin: 0;
@@ -103,6 +109,12 @@
 
           &:after {
             bottom: 0;
+            left: 20px;
+            right: 20px;
+            height: 4px;
+            border-radius: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
           }
         }
       }

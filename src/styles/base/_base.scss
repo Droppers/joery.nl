@@ -6,8 +6,7 @@ body.no-margin {
 }
 
 section.content {
-  padding: 0 15px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 h1.title {
@@ -62,6 +61,16 @@ h3.title:after,
   display: inline-block;
   -webkit-print-color-adjust: exact;
   background-color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+  h2.title {
+    font-size: 30px;
+  }
+
+  h3.title {
+    font-size: 22px;
+  }
 }
 
 .prefix__gradient-primary-start {

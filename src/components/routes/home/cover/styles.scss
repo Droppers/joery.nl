@@ -64,13 +64,17 @@
   }
 
   @media screen and (max-width: 768px) {
-    padding: 30px 30px;
+    padding: 20px 30px;
     margin-bottom: 30px;
     background-color: var(--card-bg);
     border-bottom: 1px solid var(--card-bg); // TODO: find an alternative
 
     h1 {
-      font-size: 30px;
+      font-size: 28px;
+
+      &:after {
+        background-color: var(--primary);
+      }
     }
 
     h2 {
