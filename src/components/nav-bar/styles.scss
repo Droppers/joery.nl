@@ -122,6 +122,9 @@
   }
 
   @media print {
+    background-color: var(--bg);
+    box-shadow: none;
+
     .container {
       justify-content: center !important;
     }

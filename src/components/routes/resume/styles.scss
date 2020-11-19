@@ -1,8 +1,12 @@
-#about {
-  .print-resume {
-    width: 100%;
+#resume {
+  .my-summary {
+    margin: 0 auto;
     margin-bottom: 30px;
-    background-color: var(--card-bg);
+  }
+
+  .personal-details {
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
 
   .icon-list {
@@ -26,5 +30,15 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  .resume-left {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+
+  .resume-right {
+    flex: 0 0 45%;
+    max-width: 45%;
   }
 }

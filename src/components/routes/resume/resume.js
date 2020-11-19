@@ -8,6 +8,11 @@ import ArborMedia from "vector/experience/arbor-media";
 import GraafschapCollege from "vector/experience/graafschap-college";
 import Saxion from "vector/experience/saxion";
 
+import MapMarker from "vector/icons/map-marker";
+import EmailOutline from "vector/icons/email-outline";
+import CellphoneAndroid from "vector/icons/cellphone-android";
+import Earth from "vector/icons/earth";
+
 import Csharp from "vector/icons/skills/csharp";
 import Javascript from "vector/icons/skills/javascript";
 import Powershell from "vector/icons/skills/powershell";
@@ -41,7 +46,7 @@ const Skills = (props) => {
   );
 };
 
-class AboutRoute extends React.Component {
+class ResumeRoute extends React.Component {
   constructor(props) {
     super(props);
 
@@ -122,49 +127,64 @@ class AboutRoute extends React.Component {
 
     return (
       <div id="page-root">
-        <div id="about" className="container page-content small">
-          <MetaTags>
-            <title>Over mij</title>
-            <meta name="description" content="Hier wat informatie over mij!" />
-            <meta property="og:title" content="Over mij" />
-            <meta
-              property="og:description"
-              content="Hier wat informatie over mij!"
-            />
-          </MetaTags>
+        <div id="resume" className="container page-content small">
           <div className="row">
-            <div className="col-lg-12">
-              <h2 className="title">Mijn informatie</h2>
+            <div className="my-summary col-sm-10">
+              Lorem ipsum doksssdasdlor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </div>
-            <div className="col-lg-7 col-md-7 about-left">
+            <div className="col-lg-7 col-md-7 resume-left">
               <h3 className="title">Werkervaring</h3>
               <Timeline items={work} />
               <h3 className="title">Educatie</h3>
               <Timeline items={education} />
             </div>
-            <div className="col-lg-5 col-md-5 about-right">
-              <div
-                onClick={() =>
-                  window.open("/static/cv-joery-droppers.pdf", "_blank")
-                }
-                className="btn btn-primary btn-outline btn-large print-resume"
-              >
-                Download mijn CV
-              </div>
-              <div className="card">
-                <div className="card-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur.
+            <div className="col-lg-5 col-md-5 resume-right">
+              <div class="card">
+                <div class="card-title">Personalia</div>
+                <div class="card-content">
+                  <div className="icon-list">
+                    <div className="icon-list-item">
+                      <CellphoneAndroid className="icon" />
+                      +31 6 18158333
+                    </div>
+                    <div className="icon-list-item">
+                      <EmailOutline className="icon" />
+                      mail@joery.nl
+                    </div>
+                    <div className="icon-list-item">
+                      <Earth className="icon" />
+                      joery.nl
+                    </div>
+                    <div className="icon-list-item">
+                      <MapMarker className="icon" />
+                      Alexandrinalaan 26, 7271 NN Borculo
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="card">
-                <div className="card-title">Vaardigheden</div>
-                <div className="card-content">
+
+              <div class="card">
+                <div class="card-title">Vaardigheden</div>
+                <div class="card-content">
                   <Skills />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-title">Projecten</div>
+                <div class="card-content">
+                  <b>AnimatedBottomBar</b>
+                  <br />
+                  Een zeer configureerbare navigatie balk library voor Android,
+                  geschreven in Kotlin. Inmiddels meer dan 350 stars op Github.
+                  <br />
+                  <br />
+                  <b>GitHub:</b> Droppers/AnimatedBottomBar
                 </div>
               </div>
             </div>
@@ -175,4 +195,4 @@ class AboutRoute extends React.Component {
   }
 }
 
-export default AboutRoute;
+export default ResumeRoute;

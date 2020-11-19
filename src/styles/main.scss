@@ -23,6 +23,8 @@
 @import "../components/routes/project/image-gallery/styles";
 @import "../components/routes/project/image-gallery/image-thumbnails/styles";
 @import "../components/routes/project/image-gallery/image-modal/styles";
+@import "../components/timeline/styles";
+@import "../components/timeline/item/styles";
 
 // Home
 @import "../components/routes/home/cover/styles";
@@ -31,8 +33,9 @@
 
 // About
 @import "../components/routes/about/styles";
-@import "../components/routes/about/timeline/styles";
-@import "../components/routes/about/timeline/item/styles";
+
+// Resume
+@import "../components/routes/resume/styles";
 
 // 404
 @import "../components/routes/not-found/styles";

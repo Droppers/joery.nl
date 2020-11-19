@@ -7,6 +7,7 @@ import BubbleCorner from "vector/bubble-corner";
 
 import HomeRoute from "../routes/home/home";
 import AboutRoute from "../routes/about/about";
+import ResumeRoute from "../routes/resume/resume";
 import ProjectRoute from "../routes/project/project";
 import NotFoundRoute from "../routes/not-found/not-found";
 
@@ -25,6 +26,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={HomeRoute}></Route>
             <Route eaxct path="/about" component={AboutRoute}></Route>
+            <Route exact path="/resume" component={ResumeRoute}></Route>
             <Route
               exact
               path="/project/:projectSlug"
