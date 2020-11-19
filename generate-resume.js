@@ -31,7 +31,7 @@ app.get("/*", (req, res) => {
 });
 const server = app.listen(port, async () => {
   await generatePdf(
-    `http://localhost:${port}/about`,
+    `http://localhost:${port}/resume`,
     "build/static/cv-joery-droppers.pdf"
   );
   server.close();
