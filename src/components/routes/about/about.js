@@ -52,14 +52,14 @@ class AboutRoute extends React.Component {
           logo: Bronkhorst,
           children: [
             {
-              title: "Software Ontwikkelaar",
-              subtitle: "Bijbaan",
+              title: "Software Developer",
+              subtitle: "Side job",
               from: "jul. 2019",
-              to: "mei 2020",
+              to: "may 2020",
             },
             {
-              title: "Software Ontwikkelaar",
-              subtitle: "Vakantiewerk",
+              title: "Software Developer",
+              subtitle: "Summer job",
               from: "jul. 2018",
               to: "aug. 2018",
             },
@@ -67,7 +67,7 @@ class AboutRoute extends React.Component {
         },
         {
           title: "Arbor Media",
-          subtitle: "Vakantiewerk – Software Ontwikkelaar",
+          subtitle: "Summer job – Software Developer",
           logo: ArborMedia,
           from: "jul. 2017",
           to: "aug. 2017",
@@ -75,15 +75,15 @@ class AboutRoute extends React.Component {
       ],
       education: [
         {
-          title: "Hogeschool Saxion",
-          subtitle: "HBO-ICT – Software Ontwikkelaar",
+          title: "Saxion University",
+          subtitle: "HBO-ICT – Software Developer",
           logo: Saxion,
           from: "2018",
-          to: "heden",
+          to: "current",
           children: [
             {
               title: "Bronkhorst High-Tech",
-              subtitle: "Stage – Software Ontwikkelaar",
+              subtitle: "Internship – Software Ontwikkelaar",
               logo: Bronkhorst,
               from: "aug. 2020",
               to: "heden",
@@ -92,21 +92,21 @@ class AboutRoute extends React.Component {
         },
         {
           title: "Graafschap College",
-          subtitle: "Applicatie Ontwikkelaar",
+          subtitle: "Application Developer",
           logo: GraafschapCollege,
           from: "2015",
           to: "2018",
           children: [
             {
               title: "Bronkhorst High-Tech",
-              subtitle: "Stage – Software Ontwikkelaar",
+              subtitle: "Internship – Software Developer",
               logo: Bronkhorst,
               from: "feb. 2018",
               to: "jul. 2018",
             },
             {
               title: "Arbor Media",
-              subtitle: "Stage – Software Ontwikkelaar",
+              subtitle: "Internship – Software Developer",
               logo: ArborMedia,
               from: "sep. 2016",
               to: "feb. 2017",
@@ -124,22 +124,22 @@ class AboutRoute extends React.Component {
       <div id="page-root">
         <div id="about" className="container page-content small">
           <MetaTags>
-            <title>Over mij</title>
-            <meta name="description" content="Hier wat informatie over mij!" />
-            <meta property="og:title" content="Over mij" />
+            <title>About me - Joery Droppers</title>
+            <meta name="description" content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
+            <meta property="og:title" content="About me - Joery Droppers" />
             <meta
               property="og:description"
-              content="Hier wat informatie over mij!"
+              content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies."
             />
           </MetaTags>
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="title">Mijn informatie</h2>
+              <h2 className="title">My information</h2>
             </div>
             <div className="col-lg-7 col-md-7 about-left">
-              <h3 className="title">Werkervaring</h3>
+              <h3 className="title">Work experience</h3>
               <Timeline items={work} />
-              <h3 className="title">Educatie</h3>
+              <h3 className="title">Education</h3>
               <Timeline items={education} />
             </div>
             <div className="col-lg-5 col-md-5 about-right">
@@ -149,7 +149,7 @@ class AboutRoute extends React.Component {
                 }
                 className="btn btn-primary btn-outline btn-large print-resume"
               >
-                Download mijn CV
+                Download my resume
               </div>
               <div className="card">
                 <div className="card-content">
@@ -162,7 +162,7 @@ class AboutRoute extends React.Component {
                 </div>
               </div>
               <div className="card">
-                <div className="card-title">Vaardigheden</div>
+                <div className="card-title">Skills</div>
                 <div className="card-content">
                   <Skills />
                 </div>

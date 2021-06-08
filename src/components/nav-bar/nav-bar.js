@@ -65,7 +65,7 @@ class NavBar extends React.Component {
               Home
             </NavLink>
             <NavLink className="link" to="/about">
-              Over mij
+              About me
             </NavLink>
           </nav>
         </div>

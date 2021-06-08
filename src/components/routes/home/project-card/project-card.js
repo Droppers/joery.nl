@@ -65,7 +65,7 @@ class ProjectCard extends React.Component {
               to={"/project/" + project.slug}
               className="btn btn-primary btn-outline read-more"
             >
-              Meer informatie
+              More information
             </Link>
           )}
           {project.github && (

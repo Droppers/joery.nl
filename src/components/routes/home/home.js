@@ -20,15 +20,15 @@ class HomeRoute extends React.Component {
       <div id="page-root">
         <MetaTags>
           <title>Joery Droppers</title>
-          <meta name="description" content="Ik ben Joery Droppers!" />
+          <meta name="description" content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
           <meta property="og:title" content="Joery Droppers" />
-          <meta property="og:description" content="Ik ben Joery Droppers!" />
+          <meta property="og:description" content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
         </MetaTags>
 
         <Cover />
         <section className="content">
           <div className="container">
-            <h2 className="title align-middle">Mijn projecten</h2>
+            <h2 className="title align-middle">My projects</h2>
 
             <div className="row d-flex">
               {projects.map((project, key) => (
