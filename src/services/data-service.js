@@ -3,9 +3,7 @@ import Animatedbottombar from "vector/projects/animatedbottombar";
 export const allProjects = [
   {
     name: "AnimatedBottomBar",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    descriptionLong:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik typ weer wat onzin, zodat ik kan zien of dit eigenlijk wel werkt. Geen idee.",
+    description: "A customizable and easy to use bottom bar view with sleek animations.",
     cover: {
       type: "image",
       image: Animatedbottombar,

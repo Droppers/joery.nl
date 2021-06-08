@@ -10,12 +10,10 @@ class Cover extends React.Component {
           <div className="col-lg-6 col-md-6 col-md-12">
             <Bubble className="bubble" src="static/vector/bubble.svg" />
             <h1 class="title">Joery Droppers</h1>
-            <h2>Software Engineer</h2>
+            <h2>Software Developer</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmodz tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              I am a 25-year-old software developer and live in Borculo, The Netherlands.
+              In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies.
             </p>
             <SocialIcons className="social-media" />
           </div>

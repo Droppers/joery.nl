@@ -1,6 +1,5 @@
 import React from "react";
 import Timeline from "../../timeline/timeline";
-import MetaTags from "react-meta-tags";
 import classnames from "classnames";
 
 import Bronkhorst from "vector/experience/bronkhorst";

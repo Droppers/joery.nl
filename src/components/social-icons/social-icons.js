@@ -9,7 +9,7 @@ class SocialIcons extends React.Component {
         <a href="https://github.com/droppers" aria-label="Github" className="icon">
           <Github alt="Github" />
         </a>
-        <a href="https://linkedin.com" aria-label="LinkedIn" className="icon">
+        <a href="https://www.linkedin.com/in/joerydroppers/" aria-label="LinkedIn" className="icon">
           <Linkedin alt="LinkedIn" />
         </a>
       </div>
