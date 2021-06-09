@@ -12,7 +12,7 @@ class Cover extends React.Component {
             <h1 class="title">Joery Droppers</h1>
             <h2>Software Developer</h2>
             <p>
-              I am a 25-year-old software developer and live in Borculo, The Netherlands.
+              I am a 22-year-old software developer and live in Borculo, The Netherlands.
               In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies.
             </p>
             <SocialIcons className="social-media" />

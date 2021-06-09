@@ -20,9 +20,9 @@ class HomeRoute extends React.Component {
       <div id="page-root">
         <MetaTags>
           <title>Joery Droppers</title>
-          <meta name="description" content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
+          <meta name="description" content="I am a 22-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
           <meta property="og:title" content="Joery Droppers" />
-          <meta property="og:description" content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
+          <meta property="og:description" content="I am a 22-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
         </MetaTags>
 
         <Cover />

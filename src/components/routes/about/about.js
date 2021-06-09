@@ -125,11 +125,11 @@ class AboutRoute extends React.Component {
         <div id="about" className="container page-content small">
           <MetaTags>
             <title>About me - Joery Droppers</title>
-            <meta name="description" content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
+            <meta name="description" content="I am a 22-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies." />
             <meta property="og:title" content="About me - Joery Droppers" />
             <meta
               property="og:description"
-              content="I am a 25-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies."
+              content="I am a 22-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies."
             />
           </MetaTags>
           <div className="row">
