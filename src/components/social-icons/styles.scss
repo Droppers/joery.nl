@@ -1,18 +1,24 @@
 .social-icons {
   margin-top: 20px;
+  display: inline-flex;
+  background-color: var(--bg);
+  padding: 5px;
+  border-radius: 8px;
 
   a.icon {
-    margin-left: 10px;
+    display: flex;
+    margin-left: 4px;
 
     &:first-child {
       margin-left: 0;
     }
 
     svg {
-      height: 28px;
-      width: 28px;
+      height: 24px;
+      width: 24px;
       opacity: 0.8;
       transition: opacity 250ms;
+      color: var(--text);
       filter: var(--icon-filter);
 
       &:hover {

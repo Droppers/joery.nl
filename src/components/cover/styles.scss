@@ -1,0 +1,94 @@
+.cover {
+  padding: 120px 30px;
+  position: relative;
+  color: #fff;
+  animation: slideIn 400ms cubic-bezier(0.1, 0.99, 0.53, 1);
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    max-width: 900px;
+  }
+
+  .bubble {
+    position: absolute;
+    top: -35%;
+    z-index: 0;
+    right: 0;
+    left: -15%;
+    width: 125%;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  * {
+    position: relative;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 32px;
+
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+  h2 {
+    text-align: left;
+    font-weight: 400;
+    margin: 0;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      height: 16px;
+      display: none;
+    }
+  }
+
+  .social-icons svg {
+    filter: none !important;
+    fill: var(--text);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 30px;
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 28px;
+
+      &:after {
+        background-color: var(--primary);
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+}

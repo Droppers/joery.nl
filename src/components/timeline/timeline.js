@@ -1,18 +1,19 @@
-import React from 'react';
+import React from "react";
+import { translateObject, useTranslation } from "utils/translate";
 import TimelineItem from "./item/item";
 
-class Timeline extends React.Component {
-  render() {
-    const { items } = this.props;
+const Timeline = (props) => {
+  useTranslation();
 
-    return (
-      <div className="timeline">
-        {items.map((item, key) => (
-          <TimelineItem item={item} key={key} />
-        ))}
-      </div>
-    );
-  }
-}
+  const { items } = props;
+
+  return (
+    <div className="timeline">
+      <For each="item" of={items}>
+        <TimelineItem item={item} key={translateObject(item, "title")} />
+      </For>
+    </div>
+  );
+};
 
 export default Timeline;

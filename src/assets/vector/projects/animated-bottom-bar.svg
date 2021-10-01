@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="d-inline-block align-top" width="192.36" height="78.35" version="1.1" viewBox="0 0 194.83 79.35" xmlns="http://www.w3.org/2000/svg">
+ <rect width="194.83" height="30.19" rx="3.54" ry="3.54" fill="#fff" paint-order="fill markers stroke"/>
+ <rect y="49.16" width="194.83" height="30.19" rx="3.54" ry="3.54" fill="#212125" paint-order="fill markers stroke"/>
+ <path d="M56.25 0c0 1.08.87 1.94 1.95 1.94h29.79c1.07 0 1.94-.86 1.94-1.94z" fill="#6302ee"/>
+ <path d="M67.53 9.62h11.22v11.21H67.53z" fill="none"/>
+ <g font-family="'Google Sans'" font-size="6.62px" font-weight="bold" letter-spacing="0" stroke-width=".07" word-spacing="0">
+  <text x="105.98" y="16.799999" style="line-height:1.25"><tspan x="105.98" y="16.799999" font-family="'Google Sans'" font-weight="normal">Stopwatch</tspan></text>
+  <text x="161.99001" y="17.440001" style="line-height:1.25"><tspan x="161.99001" y="17.440001" font-family="'Google Sans'" font-weight="normal">Timer</tspan></text>
+  <text x="15.71" y="17.41" style="line-height:1.25"><tspan x="15.71" y="17.41" font-family="'Google Sans'" font-weight="normal">Alarm</tspan></text>
+  <text x="60.299999" y="66.599998" fill="#9aa4ff" style="line-height:1.25"><tspan x="60.299999" y="66.599998" fill="#9aa4ff" font-family="'Google Sans'" font-weight="normal">Bedtime</tspan></text>
+ </g>
+ <g fill="none">
+  <path d="M67.53 9.62h11.22v11.21H67.53z"/>
+  <path d="M77.82 12.29l-2.15-1.8-.6.71 2.15 1.8zm-6.6-1.09l-.6-.71-2.15 1.8.6.71zm2.16 2.16h-.7v2.8l2.22 1.33.35-.57-1.87-1.11zm-.24-1.87a4.2 4.2 0 100 8.41 4.2 4.2 0 000-8.41zm0 7.47a3.27 3.27 0 110-6.53 3.27 3.27 0 010 6.53z"/>
+ </g>
+ <path d="M56.25 49.16c0 1.08.87 1.95 1.95 1.95h29.79c1.07 0 1.94-.87 1.94-1.95z" fill="#9aa4ff"/>
+ <path d="M166.04 59.35v2.95l1.96 1.96-1.96 1.96v2.94h5.88v-2.94l-1.96-1.96 1.96-1.97v-2.94h-5.88zm-45.67 0v.94h2.8v-.93h-2.8zm-98.54.2l-2.15 1.8.6.71 2.15-1.8-.6-.71zm5.05 0l-.6.71 2.15 1.8.6-.7-2.15-1.81zm140.14.78h3.92v1.72l-1.96 1.96-1.96-1.96v-1.72zm-142.66.22a4.2 4.2 0 000 8.41 4.2 4.2 0 000-8.41zm97.41.2a4.2 4.2 0 103.28 1.59l.67-.67c-.2-.23-.43-.45-.66-.65l-.66.67a4.14 4.14 0 00-2.63-.94zm46.23.56v.37l.98.98.98-.98v-.37H168zm-143.64.17a3.27 3.27 0 110 6.54 3.27 3.27 0 010-6.54zm97.41.2a3.27 3.27 0 110 6.55 3.27 3.27 0 010-6.54zm-97.88.74v2.8l2.22 1.33.35-.57-1.87-1.1v-2.46h-.7zm97.41.2v2.8h.94v-2.8h-.94zm47.68 1.88l1.96 1.96v1.72h-3.92v-1.72l1.96-1.96z" fill="#fff" fill-opacity=".85"/>
+ <path d="M70.92 15.86a1.33 1.33 0 100-2.67 1.33 1.33 0 000 2.67m0-1.78c.24 0 .44.2.44.45s-.2.44-.44.44c-.57-.03-.57-.86 0-.89m5.34-1.34H72.7v3.57h-3.57v-4.46h-.89v6.69h.9V17.2h8.01v1.34h.9v-4.01c0-1-.8-1.79-1.79-1.79m.9 3.57h-3.57v-2.68h2.67c.5 0 .9.4.9.9z" fill="#6302ee"/>
+</svg>

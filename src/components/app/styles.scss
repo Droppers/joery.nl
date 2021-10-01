@@ -23,12 +23,29 @@
 
   .bubble-corner {
     position: absolute;
-    top: 0;
+    top: -150px;
     right: 0;
-    width: 32%;
+    width: 34%;
 
     @media (max-width: 768px) {
       display: none;
+    }
+
+    @media screen and (max-width: 1350px) {
+      top: -100px;
+    }
+
+    @media screen and (max-width: 1250px) {
+      top: -75px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      top: -50px;
+    }
+
+    @media screen and (min-width: 1600px) {
+      top: -300px;
+      width: 38%;
     }
   }
 

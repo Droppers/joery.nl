@@ -1,0 +1,66 @@
+.locale-picker {
+  height: 40px;
+  float: left;
+  font-size: 14px;
+  border-radius: 10px;
+
+  .selected,
+  .options .option {
+    display: flex;
+    height: 40px;
+    padding: 0px 15px;
+    align-items: center;
+
+    .flag {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+
+    .arrow {
+      height: 12px;
+      width: 12px;
+      margin-left: 10px;
+
+      * {
+        stroke: var(--text-secondary);
+      }
+    }
+  }
+
+  .options {
+    display: none;
+    margin-top: -40px;
+    background: var(--card-bg);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    width: 0;
+    position: relative;
+
+    .option {
+      cursor: pointer;
+
+      .flag {
+        margin-right: 15px;
+      }
+
+      @media screen and (max-width: 768px) {
+        span {
+          display: none;
+        }
+
+        .flag {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .options {
+      display: block;
+      width: auto;
+    }
+  }
+}

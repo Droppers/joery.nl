@@ -1,0 +1,42 @@
+#about {
+  .about-left {
+    h3 {
+      margin-top: 25px;
+      margin-bottom: 15px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .download-resume-container {
+      display: flex;
+      align-items: center;
+
+      .picture {
+        height: 120px;
+        width: 120px;
+        border-radius: 8px;
+        background: var(--card-bg);
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .btn {
+        margin-left: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .row.about-content {
+      flex-direction: column-reverse;
+    }
+  }
+}

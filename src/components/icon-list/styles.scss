@@ -1,0 +1,24 @@
+.icon-list {
+  .icon-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    white-space: pre-wrap;
+
+    > .icon {
+      height: 20px;
+      width: 20px;
+      margin-right: 15px;
+      flex-shrink: 0;
+
+      > path {
+        fill: var(--text);
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

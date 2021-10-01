@@ -9,6 +9,12 @@
 
   .container {
     height: $nav-bar-height;
+    align-items: center;
+
+    @media print {
+      height: auto;
+      padding: 20px 0px;
+    }
   }
 
   .logo {
@@ -18,7 +24,11 @@
     color: var(--text);
 
     @media print {
-      font-size: 24px;
+      font-size: 20px;
+
+      svg {
+        height: 35px;
+      }
     }
 
     svg {
@@ -26,36 +36,79 @@
     }
   }
 
+  .locale-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding-left: 15px;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.12);
+
+    .theme-toggle {
+      margin-right: 3px;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex: 0;
+    }
+  }
+
+  &:not(.transparent) {
+    .locale-container {
+      box-shadow: none;
+      background: transparent;
+    }
+  }
+
   .nav {
+    align-items: center;
+    margin-left: auto;
+
     .link {
       text-decoration: none;
-      padding: 0 12px;
+      padding: 0 15px;
       display: flex;
       align-items: center;
       margin-left: 20px;
       position: relative;
       font-size: 15px;
       color: var(--text);
+      background: var(--bg);
+      border-radius: 8px;
+      transition: box-shadow 250ms;
+      height: 46px;
 
-      &:first-child {
-        margin-left: 0;
+      svg {
+        margin-right: 10px;
+        height: 20px;
+        fill: var(--text);
       }
 
       &:after {
         content: "";
         position: absolute;
-        height: 3px;
+        background-color: var(--primary);
+        opacity: 0;
+        width: 100%;
+        height: 100%;
         left: 0;
-        right: 0;
-        border-radius: 3px;
-        bottom: 12px;
-        background-color: transparent;
-        transition: background-color 250ms;
+        top: 0;
+        border-radius: 8px;
+        transition: opacity 250ms;
       }
 
-      &.active:after,
-      &:hover:after {
-        background-color: var(--primary);
+      &.active,
+      &:hover {
+        box-shadow: 0px 0px 0px 1px var(--primary);
+
+        &:after {
+          opacity: 0.1;
+        }
+      }
+
+      &:first-child {
+        margin-left: 0;
       }
     }
   }
@@ -64,26 +117,24 @@
     &.transparent {
       background: transparent;
       box-shadow: none;
+    }
 
+    &:not(.transparent) {
       .nav .link {
-        color: #fff;
-
-        &.active:after,
-        &:hover:after {
-          background-color: #fff;
-        }
+        background: transparent;
       }
     }
   }
 
   @media screen and (max-width: 768px) {
+    background-color: transparent;
     box-shadow: none;
     position: relative;
 
     .container {
-      flex-direction: column;
       padding: 15px 0;
       height: auto;
+      justify-content: center;
 
       .logo {
         justify-content: center;
@@ -91,7 +142,7 @@
 
       .nav {
         height: 64px;
-        justify-content: space-between;
+        justify-content: center;
         position: fixed;
         bottom: 0;
         left: 0;
@@ -102,28 +153,21 @@
         box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.16);
 
         .link {
-          margin: 0;
-          width: 100%;
-          justify-content: center;
-          margin: 0 5px;
-
-          &:after {
-            bottom: 0;
-            left: 20px;
-            right: 20px;
-            height: 4px;
-            border-radius: 0;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-          }
+          margin: 0 10px;
+          height: 42px;
+          padding: 0 25px;
         }
       }
     }
   }
 
   @media print {
-    background-color: var(--bg);
+    background-color: transparent;
     box-shadow: none;
+
+    @page:first {
+      margin-top: 100px;
+    }
 
     .container {
       justify-content: center !important;

@@ -1,5 +1,17 @@
 {
   "projects": {
-    "default": "routeboek"
+    "default": "joery-f5c2d"
+  },
+  "targets": {
+    "joery-f5c2d": {
+      "hosting": {
+        "joery-en": [
+          "joery-en"
+        ],
+        "joery-nl": [
+          "joery-nl"
+        ]
+      }
+    }
   }
 }
