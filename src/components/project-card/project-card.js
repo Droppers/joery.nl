@@ -11,7 +11,7 @@ import PhoneFrame from "./phone-frame/phone-frame";
 const ProjectCard = (props) => {
   useTranslation();
   const [githubLoading, setGithubLoading] = useState(true);
-  const { project, hideButton } = props;
+  const { project, buttonStyleLink } = props;
 
   return (
     <div className="project-card">
@@ -74,7 +74,7 @@ const ProjectCard = (props) => {
           {translateObject(project, "description")}
         </span>
         <div className="bottom">
-          <If condition={!hideButton}>
+          <If condition={!buttonStyleLink}>
             <If condition={project.slug}>
               <Link
                 to={`/project/${project.slug}`}
@@ -91,6 +91,14 @@ const ProjectCard = (props) => {
                 <SvgGithub /> GitHub
               </a>
             </If>
+          </If>
+          <If condition={project.github && buttonStyleLink}>
+            <a
+              className="github-link"
+              href={`https://github.com/${project.github.user}/${project.github.repo}`}
+            >
+              {project.github.user}/{project.github.repo}
+            </a>
           </If>
           <If condition={project.github && !isPrerender()}>
             <div

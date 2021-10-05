@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="24" height="32" version="1.1" viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="linearGradient38529" x1="94" x2="113" y1="-103.5" y2="-103.5" gradientTransform="translate(-89 108)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#1dcafc" offset="0"/>
+   <stop stop-color="#32a4e8" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient31155" x1="94" x2="113" y1="-103.5" y2="-103.5" gradientTransform="translate(-94 114)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#30a6e9" offset="0"/>
+   <stop stop-color="#207bdd" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient118856" x1="-14.352" x2="-10.258" y1="2.5802" y2="8.9171" gradientTransform="matrix(1.2041 0 0 1.3611 34.656 6.8632)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ffd14f" offset="0"/>
+   <stop stop-color="#e09f00" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(0,-4)">
+  <g transform="translate(0,10.5)">
+   <rect x="9" y="4" width="5" height="1" fill="#eaa62b" style="paint-order:markers fill stroke"/>
+   <rect x="6" y="10" width="5" height="1" fill="#21a6ed" style="paint-order:markers fill stroke"/>
+   <path d="m16 0c-0.554 0-1 0.446-1 1v2.75h-5v-0.75c0-0.554-0.446-1-1-1h-3c-0.554 0-1 0.446-1 1v3c0 0.554 0.446 1 1 1h3c0.554 0 1-0.446 1-1v-0.75h5v2.75c0 0.554 0.446 1 1 1h7c0.554 0 1-0.446 1-1v-7c0-0.554-0.446-1-1-1z" fill="url(#linearGradient38529)" stroke-width="2.8881" style="paint-order:markers fill stroke"/>
+   <path d="m11 6c-0.554 0-1 0.446-1 1v2.75h-5v-0.75c0-0.554-0.446-1-1-1h-3c-0.554 0-1 0.446-1 1v3c0 0.554 0.446 1 1 1h3c0.554 0 1-0.446 1-1v-0.75h5v2.75c0 0.554 0.446 1 1 1h7c0.554 0 1-0.446 1-1v-7c0-0.554-0.446-1-1-1z" fill="url(#linearGradient31155)" stroke-width="2.8881" style="paint-order:markers fill stroke"/>
+   <path d="m18 9a0.69517 0.78581 0 0 0-0.60156 0.39258l-2.7559 5.3926-1.5488 3.0352a0.69517 0.78581 0 0 0 0.60156 1.1797h8.6094a0.69517 0.78581 0 0 0 0.60156-1.1797l-2.7539-5.3926-1.5508-3.0352a0.69517 0.78581 0 0 0-0.60156-0.39258zm0 3c0.277 0 0.5 0.223 0.5 0.5v2c0 0.277-0.223 0.5-0.5 0.5s-0.5-0.223-0.5-0.5v-2c0-0.277 0.223-0.5 0.5-0.5z" fill="url(#linearGradient118856)" style="paint-order:markers stroke fill"/>
+   <path d="m18 12c-0.277 0-0.5 0.223-0.5 0.5v2c0 0.277 0.223 0.5 0.5 0.5s0.5-0.223 0.5-0.5v-2c0-0.277-0.223-0.5-0.5-0.5zm-0.02539 4c-0.26492 0.013342-0.47461 0.23166-0.47461 0.5 0 0.277 0.223 0.5 0.5 0.5s0.5-0.223 0.5-0.5-0.223-0.5-0.5-0.5c-0.0087 0-0.01685-4.3e-4 -0.02539 0z" fill="#242424" style="paint-order:markers fill stroke"/>
+  </g>
+ </g>
+</svg>

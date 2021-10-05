@@ -44,7 +44,12 @@ const translations = {
       languages: "Languages",
       hobbys: "Hobby's",
       downloadResume: "Download resume",
-      myProjects: "My projects",
+      myProjects: {
+        title: "My projects",
+        others: "Other projects",
+        description:
+          "In my spare time I like to spend time on both personal and open source projects, see some of my projects which can be found on GitHub below.",
+      },
     },
     notFound: {
       title: "Page not found",
@@ -88,7 +93,7 @@ const translations = {
     about: {
       title: "Informatie over mij",
       summary:
-        "Ik ben een 22-jarige software ontwikkelaar en woon in Borculo, Nederland. In mijn vrije tijd draag ik graag bij aan open-source projecten en blijf ik op de hoogte van de nieuwste technologieën van zowel web en backend. Het schrijven van duidelijke en geoptimaliseerde code motiveert mij.",
+        "Ik ben een 22-jarige software ontwikkelaar woonachtig in Borculo, Nederland. Veel van mijn vrije tijd besteed ik aan het programmeren in de vorm van open-source en persoonlijke projecten. Op deze manier probeer ik mijn vaardigheden te verbeteren en blijft ik op hoogte van de nieuwste technologieën rond softwareontwikkeling.",
       experience: {
         work: "Werkervaring",
         education: "Educatie",
@@ -98,7 +103,12 @@ const translations = {
       languages: "Talen",
       hobbys: "Hobbies",
       downloadResume: "Download CV",
-      myProjects: "Mijn projecten",
+      myProjects: {
+        title: "Mijn projecten",
+        others: "Overige projecten",
+        description:
+          "In mijn vrije tijd hou ik er van om tijd te besteden aan zowel persoonlijke als open-source projecten, zie hieronder een aantal van mijn projecten die terug te vinden zijn op GitHub.",
+      },
     },
     notFound: {
       title: "Pagina niet gevonden",

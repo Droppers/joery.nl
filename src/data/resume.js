@@ -24,15 +24,15 @@ const resume = {
     },
     {
       icon: SvgEmailOutline,
-      text: "me@joery.nl",
+      text: "mail@joery.nl",
     },
     {
       icon: SvgEarth,
-      text: "Joery.nl",
+      text: "<a href='https://joery.nl/'>Joery.nl</a>",
     },
     {
       icon: SvgMapMarker,
-      text: "Alexandrinalaan 26\n7271 NN Borculo",
+      text: "Alexandrinalaan 26\nBorculo, Nederland",
     },
   ],
   languages: [
@@ -81,12 +81,12 @@ const resume = {
       en: {
         title: "Bronkhorst",
         description:
-          "During this side job and summer job, my primary occupation was optimizing database speed while also  working on other regular tasks.",
+          "During this side job, my primary occupation was optimizing database speed while also  working on other regular tasks.",
       },
       nl: {
         title: "Bronkhorst",
         description:
-          "Tijdens deze bijbaan en vakantiewerk was mijn primaire bezigheid het optimaliseren van database snelheid en daarnaast het oppakken en werken aan overige taken.",
+          "Tijdens deze bijbaan was mijn primaire bezigheid het optimaliseren van .NET database-operaties om de database snelheid te verbeteren en daarnaast het werken aan overige taken.",
       },
       logo: SvgBronkhorst,
       children: [
@@ -221,7 +221,7 @@ const resume = {
             title: "Arbor Media",
             subtitle: "Stage – Software Ontwikkelaar",
             description:
-              "Ontwerpen en realiseren van een desktop applicatie om thumbnails te genereren voor media bestanden in de vorm van het Arbor Media thumbnail formaat.",
+              "Ontwerpen en realiseren van een desktop applicatie om thumbnails te genereren voor media bestanden in de vorm van het intern ontworpen Arbor Media thumbnail formaat.",
             from: "sep. 2016",
             to: "feb. 2017",
           },

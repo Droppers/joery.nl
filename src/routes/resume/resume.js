@@ -6,6 +6,21 @@ import ProjectCard from "components/project-card/project-card";
 import { Translate } from "utils/translate";
 import Picture from "assets/images/picture.png";
 
+const otherProjects = [
+  {
+    text: {
+      en: "<a href='https://github.com/Droppers/SingleFileExtractor'>Droppers/SingleFileExtractor</a>: een dotnet tool om .NET single file applicaties uit te pakken.",
+      nl: "<a href='https://github.com/Droppers/SingleFileExtractor'>Droppers/SingleFileExtractor</a>: een dotnet tool om .NET single file applicaties uit te pakken.",
+    },
+  },
+  {
+    text: {
+      en: "<a href='https://github.com/Droppers/Joery.nl'>Droppers/Joery.nl</a>: mijn persoonlijke website en CV.",
+      nl: "<a href='https://github.com/Droppers/Joery.nl'>Droppers/Joery.nl</a>: mijn persoonlijke website en CV.",
+    },
+  },
+];
+
 const ResumeRoute = () => (
   <div id="page-root">
     <div id="resume" className="container page-content small">
@@ -22,7 +37,7 @@ const ResumeRoute = () => (
           <h3 className="title">
             <Translate path="about.personalInfo" />
           </h3>
-          <IconList items={resume.personalia} />
+          <IconList items={resume.personalia} renderHtml />
           <h3 className="title">
             <Translate path="about.skills" />
           </h3>
@@ -50,14 +65,24 @@ const ResumeRoute = () => (
       <div className="row pagebreak">
         <div className="col-12">
           <h2 className="title align-middle">
-            <Translate path="about.myProjects" />
+            <Translate path="about.myProjects.title" />
           </h2>
+          <p className="page-description">
+            <Translate path="about.myProjects.description" />
+          </p>
           <div className="row d-flex">
             <For each="project" of={projects}>
               <div className="col-6" key={project.name.en}>
-                <ProjectCard project={project} hideButton />
+                <ProjectCard project={project} buttonStyleLink />
               </div>
             </For>
+          </div>
+          <div>
+            <br />
+            <h3 className="title align-middle">
+              <Translate path="about.myProjects.others" />
+            </h3>
+            <IconList items={otherProjects} renderHtml />
           </div>
         </div>
       </div>

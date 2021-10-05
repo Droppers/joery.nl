@@ -4,13 +4,15 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.3.1",
+    "global": "^4.4.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.2",
     "react-github-data": "file:.yalc/react-github-data",
     "react-meta-tags": "^1.0.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "yalc": "^1.0.0-pre.53"
   },
   "scripts": {
     "start": "react-app-rewired start",

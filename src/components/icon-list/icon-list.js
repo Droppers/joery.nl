@@ -4,7 +4,7 @@ import { translateObject, useTranslation } from "utils/translate";
 
 const IconList = (props) => {
   useTranslation();
-  const { items, className } = props;
+  const { items, className, renderHtml } = props;
 
   return (
     <div className={classNames("icon-list", className)}>
@@ -16,7 +16,17 @@ const IconList = (props) => {
             <If condition={item.icon}>
               <item.icon className="icon" />
             </If>
-            {translateObject(item, "text")}
+            <Choose>
+              <When condition={renderHtml}>
+                <div
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{
+                    __html: translateObject(item, "text"),
+                  }}
+                />
+              </When>
+              <Otherwise>{translateObject(item, "text")}</Otherwise>
+            </Choose>
           </div>
         )}
       />
