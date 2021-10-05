@@ -1,77 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, withRouter } from "react-router-dom";
-import Logo from "vector/logo";
+import { Translate } from "utils/translate";
+import SvgLogo from "assets/vector/logo.svg";
+import SvgHome from "assets/vector/icons/home.svg";
+import SvgAbout from "assets/vector/icons/about.svg";
+import LocalePicker from "components/locale-picker/locale-picker";
+import ThemeToggle from "components/theme-toggle/theme-toggle";
 
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
+const NavBar = ({ history }) => {
+  const [home, setHome] = useState(history.location.pathname === "/");
+  const [transparent, setTransparent] = useState(true);
 
-    this.state = {
-      home: this.props.history.location.pathname === "/",
-      transparent: true
-    };
-  }
+  useEffect(() => {
+    const handleScroll = () => setTransparent(window.pageYOffset < 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", () => handleScroll);
+  }, []);
 
-  componentDidMount() {
-    this.unlisten = this.props.history.listen((location, action) => {
-      this.routeChanged(location);
+  useEffect(() => {
+    const unlisten = history.listen((location) => {
+      window.scrollTo(0, 0);
+      setHome(location.pathname === "/");
     });
+    return () => unlisten();
+  }, []);
 
-    window.addEventListener("scroll", () => this.handleScroll());
-  }
-  componentWillUnmount() {
-    this.unlisten();
-
-    window.removeEventListener("scroll", () => this.handleScroll());
-  }
-
-  handleScroll() {
-    this.setState({
-      transparent: window.pageYOffset < 50
-    });
-  }
-
-  routeChanged(location) {
-    window.scrollTo(0, 0);
-
-    this.setState({
-      home: location.pathname === "/"
-    });
-  }
-
-  render() {
-    const { home, transparent } = this.state;
-
-    return (
-      <div
-        className={
-          "nav-bar " +
-          ((home && transparent) || transparent ? "transparent" : "")
-        }
-      >
-        <div className="container d-flex justify-content-between ">
-          <Link className="logo d-inline-flex align-items-center" to="/">
-            <Logo
-              width="38"
-              height="38"
-              className="d-inline-block align-top"
-              alt="Logo"
-            />
-            <span className="dont-print">Joery</span>
-            <span className="print">Joery Droppers</span>
-          </Link>
-          <nav className="nav d-flex dont-print">
-            <NavLink exact className="link" to="/">
-              Home
-            </NavLink>
-            <NavLink className="link" to="/about">
-              About me
-            </NavLink>
-          </nav>
+  return (
+    <div
+      className={`nav-bar ${
+        (home && transparent) || transparent ? "transparent" : ""
+      }`}
+    >
+      <div className="container d-flex">
+        <Link className="logo d-inline-flex align-items-center" to="/">
+          <SvgLogo
+            width="38"
+            height="38"
+            className="d-inline-block align-top"
+            alt="Logo"
+          />
+          <span className="dont-print">Joery</span>
+          <span className="print">Joery Droppers</span>
+        </Link>
+        <div className="locale-container dont-print">
+          <ThemeToggle />
+          <LocalePicker />
         </div>
+        <nav className="nav d-flex dont-print">
+          <NavLink exact className="link" to="/">
+            <SvgHome />
+            <Translate path="navigation.home" />
+          </NavLink>
+          <NavLink className="link" to="/about">
+            <SvgAbout />
+            <Translate path="navigation.about" />
+          </NavLink>
+        </nav>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default withRouter(NavBar);

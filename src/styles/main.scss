@@ -20,22 +20,16 @@
 @import "../components/nav-bar/styles";
 @import "../components/footer/styles";
 @import "../components/social-icons/styles";
-@import "../components/routes/project/image-gallery/styles";
-@import "../components/routes/project/image-gallery/image-thumbnails/styles";
-@import "../components/routes/project/image-gallery/image-modal/styles";
+@import "../components/icon-list/styles";
 @import "../components/timeline/styles";
 @import "../components/timeline/item/styles";
+@import "../components/locale-picker/styles";
+@import "../components/cover/styles";
+@import "../components/project-card/styles";
+@import "../components/project-card/phone-frame/styles";
+@import "../components/theme-toggle/styles";
 
-// Home
-@import "../components/routes/home/cover/styles";
-@import "../components/routes/home/project-card/styles";
-@import "../components/routes/home/project-card/phone-frame/styles";
-
-// About
-@import "../components/routes/about/styles";
-
-// Resume
-@import "../components/routes/resume/styles";
-
-// 404
-@import "../components/routes/not-found/styles";
+// Routes
+@import "../routes/about/styles";
+@import "../routes/resume/styles";
+@import "../routes/not-found/styles";

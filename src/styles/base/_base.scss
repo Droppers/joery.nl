@@ -3,10 +3,24 @@ body.no-margin {
   margin: 0;
   min-height: 100%;
   font-family: "Google Sans", Helvetica, Arial, Sans-Serif;
+  font-size: 15px;
+  line-height: 1.25;
+
+  @media print {
+    margin: 0 10px;
+  }
+}
+
+@page {
+  margin: 0cm;
+}
+
+a {
+  color: var(--logo-secondary);
 }
 
 section.content {
-  padding-bottom: px;
+  padding-bottom: 20px;
 }
 
 h1.title {
@@ -30,6 +44,10 @@ h2.title {
     height: 5px;
     margin-bottom: 8px;
   }
+
+  @media print {
+    font-size: 28px;
+  }
 }
 
 h3.title {
@@ -38,6 +56,7 @@ h3.title {
   font-size: 24px;
   margin: 0;
   display: inline-block;
+  margin-bottom: 10px;
 
   &:after {
     width: 4px;
@@ -46,13 +65,29 @@ h3.title {
   }
 
   @media print {
-    font-size: 22px;
+    font-size: 20px;
+  }
+}
+
+h4.title {
+  width: 100%;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+  display: inline-block;
+
+  &:after {
+    width: 3px;
+    height: 3px;
+    margin-bottom: 5px;
   }
 }
 
 h1.title:after,
 h2.title:after,
 h3.title:after,
+h4.title:after,
 .card-title:after {
   content: "";
   margin-left: 1px;
@@ -69,16 +104,23 @@ h3.title:after,
   }
 
   h3.title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
-.prefix__gradient-primary-start {
-  stop-color: var(--gradient-primary-start) !important;
+stop[class$="gradient-primary-start"] {
+  stop-color: var(--gradient-primary-start);
 }
 
-.prefix__gradient-primary-stop {
-  stop-color: var(--gradient-primary-stop) !important;
+stop[class$="gradient-primary-stop"] {
+  stop-color: var(--gradient-primary-stop);
+}
+
+svg {
+  text[font-family="Consolas"],
+  tspan[font-family="Consolas"] {
+    font-family: "Consolas Poly";
+  }
 }
 
 .page-content {
@@ -98,6 +140,7 @@ h3.title:after,
     width: 100%;
     max-width: 100% !important;
     padding: 0 20px;
+    margin-top: 0;
   }
 }
 

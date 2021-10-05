@@ -1,7 +1,17 @@
 @font-face {
   font-family: "Google Sans";
-  src: url("/static/fonts/GoogleSans-Regular.woff") format("woff");
+  // src: url("../../assets/fonts/GoogleSans-Regular.woff") format("woff");
+  src: url("https://fonts.gstatic.com/s/googlesans/v16/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Consolas Poly";
+  src: url("../../assets/fonts/Consolas.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
 }

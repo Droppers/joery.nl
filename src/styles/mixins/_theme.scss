@@ -1,7 +1,7 @@
-:root {
+@mixin theme-light() {
   --primary: #3445e7;
   --secondary: #000;
-  --bg: #f6f6f6;
+  --bg: #fafafa;
   --card-bg: #fff;
   --text: #000;
   --text-secondary: rgba(0, 0, 0, 0.7);
@@ -13,25 +13,41 @@
   --corner-bottom-opacity: 1;
   --scrollbar-thumb: #6d7bff;
   --gradient-primary-start: #7c48d6;
-  --gradient-primary-stop: #4355e9;
+  --gradient-primary-stop: #6356d2;
+}
+
+@mixin theme-dark() {
+  --primary: #9aa4ff;
+  --secondary: #fff;
+  --bg: #212125;
+  --card-bg: #29292d;
+  --text: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --timeline: #6a6a71;
+  --icon-filter: brightness(0) invert(1);
+  --logo-primary: #6d7bff;
+  --logo-secondary: #9178f2;
+  --corner-top-opacity: 0.35;
+  --corner-bottom-opacity: 0.55;
+  --scrollbar-thumb: #9aa4ff;
+  --gradient-primary-start: #6346bd;
+  --gradient-primary-stop: #333b8c;
+}
+
+:root {
+  @include theme-light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #9aa4ff;
-    --secondary: #fff;
-    --bg: #212125;
-    --card-bg: #29292d;
-    --text: #fff;
-    --text-secondary: rgba(255, 255, 255, 0.85);
-    --timeline: #6a6a71;
-    --icon-filter: brightness(0) invert(1);
-    --logo-primary: #6d7bff;
-    --logo-secondary: #9178f2;
-    --corner-top-opacity: 0.35;
-    --corner-bottom-opacity: 0.55;
-    --scrollbar-thumb: #9aa4ff;
-    --gradient-primary-start: #6346bd;
-    --gradient-primary-stop: #333b8c;
+    @include theme-dark;
   }
+}
+
+[data-theme="light"] {
+  @include theme-light;
+}
+
+[data-theme="dark"] {
+  @include theme-dark;
 }

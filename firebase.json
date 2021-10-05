@@ -2,28 +2,26 @@
   "database": {
     "rules": "database.rules.json"
   },
-  "hosting": {
-    "public": "build",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "/home",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/about",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/foo{,/**}",
-        "destination": "/index.html"
-      },
-      {
-        "source": "**",
-        "destination": "/404.html"
-      }
-    ]
-  },
+  "hosting": [
+    {
+      "target": "joery-en",
+      "public": "dist/en",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "joery-nl",
+      "public": "dist/nl",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ],
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"

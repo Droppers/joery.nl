@@ -1,7 +1,8 @@
 #main-footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 30px 0;
 
   .logo {
@@ -9,22 +10,32 @@
     width: 64px;
   }
 
-  .copyright {
-    margin-top: 40px;
-    font-size: 16px;
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+    .copyright {
+      font-size: 16px;
+    }
+
+    .social-icons {
+      padding: 0;
+      margin-top: 5px;
+      background-color: transparent;
+    }
   }
 
   @media screen and (max-width: 768px) {
     margin-bottom: 64px;
-    padding: 15px 0;
 
     .logo {
       width: 42px;
       height: 42px;
     }
 
-    .copyright {
-      margin-top: 20px;
+    .footer-info {
+      margin-left: 10px;
     }
   }
 }

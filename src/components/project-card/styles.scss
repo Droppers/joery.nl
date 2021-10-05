@@ -1,0 +1,122 @@
+.project-card {
+  margin-bottom: 30px;
+
+  .project-cover {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: calc(9 / 16 * 100%);
+    border-radius: 10px;
+
+    &.type-image {
+      img,
+      svg {
+        margin: 10px 20px;
+      }
+
+      svg {
+        position: absolute;
+        height: calc(100% - 20px);
+        width: calc(100% - 40px);
+
+        // Disable shadow for PDF, since Chrome will then convert SVG to PNG
+        @media print {
+          filter: none !important;
+        }
+      }
+
+      .image-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-height: calc(100% - 20px);
+          max-width: calc(100% - 20px);
+          border-radius: 5px;
+        }
+      }
+    }
+
+    &.type-app {
+      .phone-frame {
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+
+        &.left {
+          transform: translate(55%, 20%);
+        }
+
+        &.right {
+          right: 0;
+          transform: translate(-55%, 10%);
+        }
+      }
+    }
+  }
+
+  .content {
+    margin-top: 15px;
+
+    .title {
+      font-size: 24px;
+      display: block;
+      margin-bottom: 10px;
+
+      &:after {
+        margin-left: 3px;
+        margin-bottom: 6px;
+        width: 4px;
+        height: 4px;
+      }
+    }
+
+    .description {
+      font-size: 15px;
+      height: 76px;
+      display: block;
+      color: var(--text-secondary);
+
+      @media print, (max-width: 768px) {
+        height: auto;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+
+    .read-more {
+      height: 40px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+    }
+
+    .github-link {
+      margin-right: 5px;
+    }
+
+    .github-stars {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 15px;
+      color: var(--text-secondary);
+
+      svg {
+        fill: var(--text-secondary);
+        margin-right: 5px;
+        height: 20px;
+      }
+    }
+  }
+}

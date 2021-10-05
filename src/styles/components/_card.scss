@@ -48,8 +48,14 @@
     box-shadow: none;
     border: 1px solid rgba(0, 0, 0, 0.12);
 
+    .card-title {
+      padding: 20px;
+      padding-bottom: 0px;
+    }
+
     .card-content {
       font-size: 15px;
+      padding: 20px;
     }
   }
 }

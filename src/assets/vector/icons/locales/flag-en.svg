@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" version="1.1" viewBox="0 0 45 30" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clipPath1862">
+   <rect width="60" height="30" rx="8.6667" ry="6.5" fill="none" style="paint-order:fill markers stroke"/>
+  </clipPath>
+  <clipPath id="clipPath1866">
+   <rect width="60" height="30" rx="8.6667" ry="6.5" fill="none" style="paint-order:fill markers stroke"/>
+  </clipPath>
+  <clipPath id="clipPath1870">
+   <rect width="60" height="30" rx="8.6667" ry="6.5" fill="none" style="paint-order:fill markers stroke"/>
+  </clipPath>
+  <clipPath id="clipPath1874">
+   <rect width="60" height="30" rx="8.6667" ry="6.5" fill="none" style="paint-order:fill markers stroke"/>
+  </clipPath>
+  <clipPath id="clipPath1878">
+   <rect width="60" height="30" rx="8.6667" ry="6.5" fill="none" style="paint-order:fill markers stroke"/>
+  </clipPath>
+ </defs>
+ <g transform="scale(.75 1)" clip-path="url(#s)">
+  <path d="m0 0v30h60v-30z" clip-path="url(#clipPath1878)" fill="#2957bf"/>
+  <path d="m0 0 60 30m0-30-60 30" clip-path="url(#clipPath1874)" stroke="#fff" stroke-width="6"/>
+  <path d="m0 0 60 30m0-30-60 30" clip-path="url(#clipPath1870)" stroke="#e1445d" stroke-width="4"/>
+  <path d="m30 0v30m-30-15h60" clip-path="url(#clipPath1866)" stroke="#fff" stroke-width="10"/>
+  <path d="m30 0v30m-30-15h60" clip-path="url(#clipPath1862)" stroke="#e1445d" stroke-width="6"/>
+ </g>
+</svg>

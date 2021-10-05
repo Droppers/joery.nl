@@ -1,23 +1,21 @@
 import React from "react";
-import SocialIcons from "../social-icons/social-icons";
-import Logo from "vector/logo";
+import SocialIcons from "components/social-icons/social-icons";
+import SvgLogo from "assets/vector/logo.svg";
 
-class Footer extends React.Component {
-  render() {
-    return (
-      <footer id="main-footer" className="dont-print">
-        <Logo
-          alt="Joery Droppers"
-          className="logo"
-          src="/static/images/logo.svg"
-        />
-        <span className="copyright">
-          Copyright {new Date().getFullYear()} - Joery Droppers
-        </span>
-        <SocialIcons />
-      </footer>
-    );
-  }
-}
+const Footer = () => (
+  <footer id="main-footer" className="dont-print">
+    <SvgLogo
+      alt="Joery Droppers"
+      className="logo"
+      src="/static/images/logo.svg"
+    />
+    <div className="footer-info">
+      <span className="copyright">
+        Copyright {new Date().getFullYear()} - Joery Droppers
+      </span>
+      <SocialIcons />
+    </div>
+  </footer>
+);
 
 export default Footer;
