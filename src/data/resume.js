@@ -32,7 +32,7 @@ const resume = {
     },
     {
       icon: SvgMapMarker,
-      text: "Alexandrinalaan 26\nBorculo, Nederland",
+      text: "Alexandrinalaan 26\n7271 NN Borculo",
     },
   ],
   languages: [
@@ -97,7 +97,7 @@ const resume = {
             to: "may 2020",
           },
           nl: {
-            subtitle: "Bijbaan – Software Ontwikkelaar",
+            subtitle: "Bijbaan – Softwareontwikkelaar",
             from: "jul. 2019",
             to: "mei 2020",
           },
@@ -109,7 +109,7 @@ const resume = {
             to: "aug. 2018",
           },
           nl: {
-            subtitle: "Vakantiewerk – Software Ontwikkelaar",
+            subtitle: "Vakantiewerk – Softwareotwikkelaar",
             from: "jul. 2018",
             to: "aug. 2018",
           },
@@ -128,9 +128,9 @@ const resume = {
       },
       nl: {
         title: "Arbor Media",
-        subtitle: "Vakantiewerk – Software Ontwikkelaar",
+        subtitle: "Vakantiewerk – Softwareontwikkelaar",
         description:
-          "Het afronden van de stage opdracht en daarnaast het bieden van ondersteuning aan de test engineer.",
+          "Het afronden van de stageopdracht en daarnaast het bieden van ondersteuning aan de test engineer.",
         from: "jul. 2017",
         to: "aug. 2017",
       },
@@ -147,7 +147,7 @@ const resume = {
       },
       nl: {
         title: "Hogeschool Saxion",
-        subtitle: "HBO-ICT – Software Ontwikkelaar",
+        subtitle: "HBO-ICT – Softwareontwikkelaar",
         from: "2018",
         to: "heden",
       },
@@ -164,9 +164,9 @@ const resume = {
           },
           nl: {
             title: "Bronkhorst High-Tech",
-            subtitle: "Stage – Software Ontwikkelaar",
+            subtitle: "Stage – Softwareontwikkelaar",
             description:
-              "Vaststellen en introduceren van een standaard voor het documenteren van softwarearchitectuur door middel van de ArchiMate (EA) beschrijvingstaal.",
+              "Vaststellen en introduceren van een standaard voor het documenteren van softwarearchitectuur door middel van de ArchiMate (Enterprise Architecture) beschrijvingstaal.",
             from: "aug. 2020",
             to: "feb. 2021",
           },
@@ -183,7 +183,7 @@ const resume = {
       },
       nl: {
         title: "Graafschap College",
-        subtitle: "Applicatie Ontwikkelaar",
+        subtitle: "Applicatieontwikkelaar",
         from: "2015",
         to: "2018",
       },
@@ -200,7 +200,7 @@ const resume = {
           },
           nl: {
             title: "Bronkhorst High-Tech",
-            subtitle: "Stage – Software Ontwikkelaar",
+            subtitle: "Stage – Softwareontwikkelaar",
             description:
               "Het toevoegen van nieuwe medewerkers aan de database, een handmatige handeling, automatiseren. Dit hield in het moderniseren en converteren van bestaande database structuur en het schrijven van een applicatie voor de conversie en automatisering.",
             from: "feb. 2018",
@@ -219,9 +219,9 @@ const resume = {
           },
           nl: {
             title: "Arbor Media",
-            subtitle: "Stage – Software Ontwikkelaar",
+            subtitle: "Stage – Softwareontwikkelaar",
             description:
-              "Ontwerpen en realiseren van een desktop applicatie om thumbnails te genereren voor media bestanden in de vorm van het intern ontworpen Arbor Media thumbnail formaat.",
+              "Ontwerpen en realiseren van een desktopapplicatie om video thumbnails te genereren voor bestaande mediabestanden in de vorm van het intern ontworpen Arbor Media thumbnail-formaat.",
             from: "sep. 2016",
             to: "feb. 2017",
           },

@@ -14,6 +14,8 @@
     .flag {
       width: 20px;
       height: 20px;
+      max-width: 20px;
+      max-height: 20px;
       border-radius: 5px;
       flex-shrink: 0;
     }
@@ -21,6 +23,8 @@
     .arrow {
       height: 12px;
       width: 12px;
+      max-width: 12px;
+      max-height: 12px;
       margin-left: 10px;
 
       * {

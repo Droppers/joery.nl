@@ -40,8 +40,10 @@
     .logo {
       flex-shrink: 0;
       height: 36px;
+      max-height: 36px;
       margin-right: 15px;
       width: 36px;
+      max-width: 36px;
       object-fit: scale-down;
       filter: var(--icon-filter);
     }
