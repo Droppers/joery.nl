@@ -93,7 +93,7 @@ const translations = {
     about: {
       title: "Informatie over mij",
       summary:
-        "Ik ben een 22-jarige softwareontwikkelaar en woon in Borculo, Nederland. Veel van mijn vrije tijd besteed ik aan het programmeren in de vorm van open-source en persoonlijke projecten. Op deze manier probeer ik mijn vaardigheden te verbeteren en blijf ik op de hoogte van de nieuwste technologieën rond softwareontwikkeling.",
+        "Ik ben een 22-jarige softwareontwikkelaar en woon in Borculo, Nederland. Veel van mijn vrije tijd besteed ik aan het programmeren in de vorm van open-source en persoonlijke projecten. Op deze manier probeer ik mijn vaardigheden te verbeteren en blijf ik op de hoogte van de nieuwste technologieën rondom softwareontwikkeling. Ik ben goed in zelfstandig werken, creatief denken en niet bang om nieuwe dingen te leren.",
       experience: {
         work: "Werkervaring",
         education: "Educatie",
