@@ -4,12 +4,12 @@ const translations = {
       home: {
         title: "Joery Droppers",
         description:
-          "My name is Joery Droppers, 22-years-old, software developer and living in Borculo, the Netherlands. In my spare time I like to contribute to open-source projects and stay up to date with the latest technologies.",
+          "My name is Joery Droppers, 23-years-old, software developer and living in Borculo, the Netherlands. In my spare time I like to contribute to open-source projects and stay up to date with the latest technologies.",
       },
       about: {
         title: "About me – Joery Droppers",
         description:
-          "My name is Joery Droppers, 22-years-old, software developer and living in Borculo, the Netherlands. In my spare time I like to contribute to open-source projects and stay up to date with the latest technologies.",
+          "My name is Joery Droppers, 23-years-old, software developer and living in Borculo, the Netherlands. In my spare time I like to contribute to open-source projects and stay up to date with the latest technologies.",
       },
       notFound: {
         title: "Page not found  – Joery Droppers",
@@ -25,7 +25,7 @@ const translations = {
         name: "Joery Droppers",
         profession: "Software Developer",
         introduction:
-          "I am a 22-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies.",
+          "I am a 23-year-old software developer and live in Borculo, The Netherlands. In my spare time, I like to contribute to open-source projects and stay up to date with the latest technologies.",
       },
       projects: {
         title: "My projects",
@@ -34,7 +34,7 @@ const translations = {
     about: {
       title: "My information",
       summary:
-        "I am a 22-year-old software developer and live in Borculo, Netherlands. In my spare time I like to contribute to open-source projects and stay up to date with the latest technologies in terms of both web and backend. Writing clean and optimized code motivates me.",
+        "I am a 23-year-old software developer and live in Borculo, Netherlands. In my spare time I like to contribute to open-source projects and stay up to date with the latest technologies in terms of both web and backend. Writing clean and optimized code motivates me.",
       experience: {
         work: "Work experience",
         education: "Education",
@@ -63,12 +63,12 @@ const translations = {
       home: {
         title: "Joery Droppers",
         description:
-          "Mijn naam is Joery Droppers, 22-jaar oud, softwareontwikkelaar en woonaachtig in Borculo, Nederland. In mijn vrije tijd draag ik graag bij aan open-source projecten en blijf ik op de hoogte van de nieuwste technologieën.",
+          "Mijn naam is Joery Droppers, 23-jaar oud, softwareontwikkelaar en woonaachtig in Borculo, Nederland. In mijn vrije tijd draag ik graag bij aan open-source projecten en blijf ik op de hoogte van de nieuwste technologieën.",
       },
       about: {
         title: "Over mij – Joery Droppers",
         description:
-          "Mijn naam is Joery Droppers, 22-jaar oud, softwareontwikkelaar en woonaachtig in Borculo, Nederland. In mijn vrije tijd draag ik graag bij aan open-source projecten en blijf ik op de hoogte van de nieuwste technologieën.",
+          "Mijn naam is Joery Droppers, 23-jaar oud, softwareontwikkelaar en woonaachtig in Borculo, Nederland. In mijn vrije tijd draag ik graag bij aan open-source projecten en blijf ik op de hoogte van de nieuwste technologieën.",
       },
       notFound: {
         title: "Pagina niet gevonden  – Joery Droppers",
@@ -84,7 +84,7 @@ const translations = {
         name: "Joery Droppers",
         profession: "Softwareontwikkelaar",
         introduction:
-          "Ik ben een 22-jarige softwareontwikkelaar en woon in Borculo, Nederland. In mijn vrije tijd draag ik graag bij aan open-source projecten en blijf ik op de hoogte van de nieuwste technologieën.",
+          "Ik ben een 23-jarige softwareontwikkelaar en woon in Borculo, Nederland. In mijn vrije tijd draag ik graag bij aan open-source projecten en blijf ik op de hoogte van de nieuwste technologieën.",
       },
       projects: {
         title: "Mijn projecten",
@@ -93,7 +93,7 @@ const translations = {
     about: {
       title: "Informatie over mij",
       summary:
-        "Ik ben een 22-jarige softwareontwikkelaar en woon in Borculo, Nederland. Veel van mijn vrije tijd besteed ik aan het programmeren in de vorm van open-source en persoonlijke projecten. Op deze manier probeer ik mijn vaardigheden te verbeteren en blijf ik op de hoogte van de nieuwste technologieën rondom softwareontwikkeling. Ik ben goed in zelfstandig werken, creatief denken en niet bang om nieuwe dingen te leren.",
+        "Ik ben een 23-jarige softwareontwikkelaar en woon in Borculo, Nederland. Veel van mijn vrije tijd besteed ik aan het programmeren in de vorm van open-source en persoonlijke projecten. Op deze manier probeer ik mijn vaardigheden te verbeteren en blijf ik op de hoogte van de nieuwste technologieën rondom softwareontwikkeling. Ik ben goed in zelfstandig werken, creatief denken en niet bang om nieuwe dingen te leren.",
       experience: {
         work: "Werkervaring",
         education: "Educatie",
